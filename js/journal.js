@@ -255,6 +255,9 @@ const JournalApp = {
     const songArtistInput = document.getElementById('entry-song-artist');
     const tagsInput = document.getElementById('entry-tags');
 
+    const date = dateInput && dateInput.value ? dateInput.value : new Date().toISOString().split('T')[0];
+    const mood = moodSelect && moodSelect.value ? moodSelect.value : 'happy';
+
     const title = titleInput ? titleInput.value.trim() : '';
     let content = contentArea ? contentArea.innerHTML.trim() : '';
     
