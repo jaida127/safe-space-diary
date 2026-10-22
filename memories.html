@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memories Gallery ♡ | Safe Space</title>
+
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/memories.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles ประดับพื้นหลัง -->
+  <div class="floating-sparkle" style="top: 14%; left: 24%; font-size: 1.5rem;">✦</div>
+  <div class="floating-sparkle" style="top: 42%; right: 7%; font-size: 1.2rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 76%; left: 18%; font-size: 1.4rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR (เมนูหลักเดสก์ท็อป)
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">“A little place to come back to yourself.”</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="journal.html" class="nav-link">
+            <span class="nav-icon">📖</span>
+            <span>Journal</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html" class="nav-link">
+            <span class="nav-icon">📅</span>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="mood.html" class="nav-link">
+            <span class="nav-icon">🌷</span>
+            <span>Mood</span>
+          </a>
+        </li>
+        <li>
+          <a href="memories.html" class="nav-link active">
+            <span class="nav-icon">📸</span>
+            <span>Memories</span>
+          </a>
+        </li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li>
+          <a href="letters.html" class="nav-link">
+            <span class="nav-icon">💌</span>
+            <span>Letters</span>
+          </a>
+        </li>
+        <li>
+          <a href="garden.html" class="nav-link">
+            <span class="nav-icon">🌱</span>
+            <span>Garden</span>
+          </a>
+        </li>
+        <li>
+          <a href="myyear.html" class="nav-link">
+            <span class="nav-icon">📊</span>
+            <span>My Year</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 7 ธีมสีสไตล์ Scrapbook -->
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container">
+          <!-- เรนเดอร์โดย js/themes.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT (แกลเลอรี่ภาพสไตล์โพลารอยด์)
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- แถบบน: วันที่ เวลา และปุ่มสุ่มธีม -->
+      <header class="top-header">
+        <div class="date-display">
+          <span class="date-text">📸 Memories Gallery</span>
+          <span class="time-text">“Snapshots of quiet days and cherished moments.”</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-sm btn-outline" onclick="ThemeManager.surpriseMe()">
+            ✨ Surprise Me!
+          </button>
+        </div>
+      </header>
+
+      <div class="memories-page-container">
+
+        <!-- หัวข้อ Memories และป้ายสถิติจำนวนภาพ -->
+        <section class="memories-header">
+          <div class="memories-title-box">
+            <h2>Your Scrapbook Photos <span class="brand-heart">♡</span></h2>
+            <p>Every photo is a memory frozen in kindness and time.</p>
+          </div>
+          <div class="memories-stats-badge" id="memories-count-badge">
+            📸 0 memories captured
+          </div>
+        </section>
+
+        <!-- ตารางภาพโพลารอยด์ (Polaroid Grid) -->
+        <section class="polaroid-grid" id="polaroid-grid"></section>
+
+        <!-- Empty State เมื่อยังไม่มีรูปภาพ -->
+        <section class="cute-empty-state" id="memories-empty-state" style="display: none;">
+          <img src="assets/stickers/bear.png" class="cute-empty-illustration" alt="scrapbook bear">
+          <h3 class="cute-empty-title">Your photo album is still empty ♡</h3>
+          <p class="cute-empty-desc">
+            ยังไม่มีภาพถ่ายบันทึกไว้เลยค่ะ เมื่อไหร่ที่คุณแนบรูปภาพใน Journal หรือบันทึกภาพประจำวันบนหน้าแรก ภาพจะมาปรากฏเป็นโพลารอยด์น่ารักๆ ที่นี่โดยอัตโนมัตินะคะ ✨
+          </p>
+          <a href="journal.html?action=new" class="btn btn-primary">
+            ✍️ เขียน Journal พร้อมแนบรูปภาพ
+          </a>
+        </section>
+
+      </div><!-- /.memories-page-container -->
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <span class="footer-sparkle">✦ ✧ ✦</span>
+        <p class="footer-text">
+          Safe Space <span class="footer-heart">♡</span> A little place to come back to yourself
+        </p>
+        <p class="footer-subtext">
+          keep these gentle memories close to your heart ♡
+        </p>
+      </footer>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAVIGATION (จอมือถือ)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item">
+        <span class="icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="journal.html" class="bottom-nav-item">
+        <span class="icon">📖</span>
+        <span>Journal</span>
+      </a>
+      <a href="calendar.html" class="bottom-nav-item">
+        <span class="icon">📅</span>
+        <span>Calendar</span>
+      </a>
+      <a href="mood.html" class="bottom-nav-item">
+        <span class="icon">🌷</span>
+        <span>Mood</span>
+      </a>
+      <a href="memories.html" class="bottom-nav-item active">
+        <span class="icon">📸</span>
+        <span>Memories</span>
+      </a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- ====================================================================
+       4. LIGHTBOX MODAL (เปิดดูภาพโพลารอยด์ขนาดใหญ่)
+       ==================================================================== -->
+  <div class="polaroid-lightbox-overlay" id="polaroid-lightbox">
+    <div class="lightbox-polaroid-frame">
+      <div class="washi-tape"></div>
+      <img src="assets/stickers/heart.png" class="scrapbook-sticker sticker-sm sticker-corner-tl" alt="heart sticker">
+      <img src="assets/stickers/star.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="star sticker">
+      
+      <button class="lightbox-close-btn" onclick="MemoriesApp.closeLightbox()" title="ปิด (Esc)">✕</button>
+
+      <button class="lightbox-nav-btn lightbox-prev" onclick="MemoriesApp.prevPhoto()" title="ภาพก่อนหน้า">‹</button>
+      <button class="lightbox-nav-btn lightbox-next" onclick="MemoriesApp.nextPhoto()" title="ภาพถัดไป">›</button>
+
+      <div class="lightbox-photo-wrap">
+        <img id="lightbox-img" src="" alt="memory large photo">
+      </div>
+
+      <div class="lightbox-info">
+        <div class="lightbox-date" id="lightbox-date">📅 ...</div>
+        <div class="lightbox-caption" id="lightbox-caption">...</div>
+        <div class="lightbox-actions">
+          <a href="#" id="lightbox-journal-btn" class="btn btn-sm btn-outline">
+            📖 เปิดอ่านบันทึกนี้ใน Journal
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/memories.js?v=4"></script>
+</body>
+</html>

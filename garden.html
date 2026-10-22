@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Garden 🌱 | Safe Space ♡</title>
+
+  <!-- สไตล์ชีต -->
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/garden.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="floating-sparkle" style="top: 8%; left: 25%; font-size: 1.5rem;">✦</div>
+  <div class="floating-sparkle" style="top: 60%; right: 8%; font-size: 1.1rem; animation-delay: 2.5s;">✧</div>
+  <div class="floating-sparkle" style="top: 85%; left: 10%; font-size: 1.3rem; animation-delay: 4s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">"A little place to come back to yourself."</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+        <li><a href="journal.html" class="nav-link"><span class="nav-icon">📖</span><span>Journal</span></a></li>
+        <li><a href="calendar.html" class="nav-link"><span class="nav-icon">📅</span><span>Calendar</span></a></li>
+        <li><a href="mood.html" class="nav-link"><span class="nav-icon">🌷</span><span>Mood</span></a></li>
+        <li><a href="memories.html" class="nav-link"><span class="nav-icon">📸</span><span>Memories</span></a></li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li><a href="letters.html" class="nav-link"><span class="nav-icon">💌</span><span>Letters</span></a></li>
+        <li><a href="garden.html" class="nav-link active"><span class="nav-icon">🌱</span><span>Garden</span></a></li>
+        <li><a href="myyear.html" class="nav-link"><span class="nav-icon">📊</span><span>My Year</span></a></li>
+        <li><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span><span>Settings</span></a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container"></div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <div class="top-header">
+        <div class="top-header-left">
+          <h2 class="page-title-header">🌱 My Little Garden</h2>
+          <p class="page-subtitle-header">สวนเล็กๆ ที่โตตามการดูแลตัวเอง ♡</p>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           GARDEN SCENE — แปลงสวน
+           ==================================================================== -->
+      <div class="garden-scene">
+        <div class="garden-sky">
+          <span class="garden-sun">☀️</span>
+          <span class="garden-cloud" style="top: 20px; left: 10%;">☁️</span>
+          <span class="garden-cloud" style="top: 40px; left: 50%;">☁️</span>
+        </div>
+        <span class="garden-level-badge" id="garden-level">🌱 Level 1 Garden</span>
+        <div class="garden-ground" id="garden-ground">
+          <!-- ต้นไม้จะถูกเรนเดอร์จาก JS -->
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           STREAK TRACKER
+           ==================================================================== -->
+      <div class="streak-card" id="streak-card">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/star.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <div class="streak-fire">🔥</div>
+        <div class="streak-number" id="streak-number">0</div>
+        <div class="streak-label">วันติดต่อกันที่ดูแลตัวเอง</div>
+        <div class="streak-sub-stats">
+          <div class="streak-sub-stat">
+            <div class="stat-val" id="best-streak">0</div>
+            <div class="stat-label">⭐ สถิติสูงสุด</div>
+          </div>
+          <div class="streak-sub-stat">
+            <div class="stat-val" id="active-days">0</div>
+            <div class="stat-label">📅 วันที่ active ทั้งหมด</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           ACTIVITY STATS
+           ==================================================================== -->
+      <div class="activity-stats-grid">
+        <div class="activity-stat-card">
+          <div class="activity-stat-icon">📖</div>
+          <div class="activity-stat-number" id="stat-journals">0</div>
+          <div class="activity-stat-label">Journal เขียน</div>
+        </div>
+        <div class="activity-stat-card">
+          <div class="activity-stat-icon">🌷</div>
+          <div class="activity-stat-number" id="stat-moods">0</div>
+          <div class="activity-stat-label">Mood Check-in</div>
+        </div>
+        <div class="activity-stat-card">
+          <div class="activity-stat-icon">💌</div>
+          <div class="activity-stat-number" id="stat-letters">0</div>
+          <div class="activity-stat-label">จดหมายเขียน</div>
+        </div>
+        <div class="activity-stat-card">
+          <div class="activity-stat-icon">📸</div>
+          <div class="activity-stat-number" id="stat-photos">0</div>
+          <div class="activity-stat-label">รูปภาพบันทึก</div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           MILESTONES
+           ==================================================================== -->
+      <div class="milestones-card">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/flower.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <div class="milestones-title">🏆 Growth Milestones</div>
+        <div class="milestones-list" id="milestones-list">
+          <!-- เรนเดอร์จาก JS -->
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="page-footer">
+        <span>✦ your little garden grows with every step you take ✦</span>
+      </div>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAV (mobile)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a href="journal.html" class="bottom-nav-item"><span class="nav-icon">📖</span><span>Journal</span></a>
+      <a href="calendar.html" class="bottom-nav-item"><span class="nav-icon">📅</span><span>Calendar</span></a>
+      <a href="mood.html" class="bottom-nav-item"><span class="nav-icon">🌷</span><span>Mood</span></a>
+      <a href="memories.html" class="bottom-nav-item"><span class="nav-icon">📸</span><span>Memories</span></a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/garden.js?v=4"></script>
+
+</body>
+</html>

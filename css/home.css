@@ -1,0 +1,850 @@
+/* ==========================================================================
+   HOME.CSS - Safe Space ♡ (Cute Scrapbook & Pinterest Aesthetic)
+   สไตล์เฉพาะหน้า Home: การ์ดคำคมไดอารี่, ดูเดิลมู้ดสติกเกอร์, และสมุดโน้ต
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. Welcome Section
+   ------------------------------------------------------------------------- */
+.welcome-section {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.welcome-badge {
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
+.welcome-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.welcome-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* -------------------------------------------------------------------------
+   2. Healing Quote Card (หัวใจหลักของหน้า: สไตล์กระดาษไดอารี่แปะเทป)
+   ------------------------------------------------------------------------- */
+.quote-card {
+  background: var(--quote-bg);
+  border: 2px dashed var(--accent-border);
+  border-radius: 28px;
+  padding: 2.5rem 2.2rem;
+  margin-bottom: 2.8rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.quote-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.quote-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--bg-card);
+  color: var(--accent);
+  font-family: 'Mali', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--accent-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.quote-doodle-star {
+  font-size: 1.2rem;
+  color: var(--primary);
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+
+.quote-content {
+  min-height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.quote-text-en {
+  font-family: 'Dancing Script', 'Caveat', cursive;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+.quote-text-th {
+  font-family: 'Mali', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.quote-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-author-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------------------------
+   3. Today's Mood Section (Cute Hand-Drawn Doodle Stickers)
+   ------------------------------------------------------------------------- */
+.mood-section {
+  margin-bottom: 3rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 26px;
+  padding: 2rem;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.4rem;
+}
+
+.mood-btn {
+  background-color: var(--bg-paper);
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.1rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  position: relative;
+}
+
+.mood-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px) scale(1.05);
+  background-color: var(--primary-soft);
+  box-shadow: var(--shadow-sm);
+}
+
+.mood-btn:hover .mood-doodle-icon {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.mood-btn.active {
+  background-color: var(--mood-active);
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(255, 123, 154, 0.25);
+  transform: translateY(-4px) scale(1.06);
+}
+
+.mood-btn.active .mood-doodle-icon {
+  animation: bounceSoft 1.5s infinite ease-in-out;
+}
+
+/* Doodle SVG Icon Container */
+.mood-doodle-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.mood-doodle-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mood-label {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.mood-btn.active .mood-label {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.mood-note-box {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  background-color: var(--bg-paper);
+  border-radius: 18px;
+  border: 1.5px dashed var(--accent-border);
+  animation: fadeInPaper 0.35s ease;
+}
+
+/* -------------------------------------------------------------------------
+   4. Why Safe Space? (Cute Scrapbook Memo Grid)
+   ------------------------------------------------------------------------- */
+.why-section {
+  margin-bottom: 3.2rem;
+}
+
+.section-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-subtitle {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.6rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.why-card {
+  padding: 1.8rem 1.4rem;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 22px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.why-card:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.why-card:nth-child(even):hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+}
+
+.why-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.why-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.why-desc {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* -------------------------------------------------------------------------
+   5. Two-Column Dashboard Grid
+   ------------------------------------------------------------------------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Quick Journal Card (สมุดโน้ตมีเส้น Lined Paper) */
+.notebook-paper-style {
+  background-color: #FFFFFF;
+  background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-light) 31px, var(--border-light) 32px);
+  border: 1.5px solid var(--border-color);
+  border-radius: 22px;
+  padding: 1.8rem;
+  position: relative;
+}
+
+/* Today's Little Things (Checklist Pins) */
+.little-things-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.little-thing-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: var(--bg-paper);
+  border: 1.5px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.little-thing-item:focus-within {
+  border-color: var(--accent);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px var(--primary-soft);
+  transform: translateX(3px);
+}
+
+.little-thing-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.little-thing-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  color: var(--text-primary);
+  font-family: 'Mali', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+}
+
+.little-thing-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------------
+   6. Today's Soundtrack Card (Enhanced Vinyl Turntable Showcase)
+   ------------------------------------------------------------------------- */
+.music-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* กล่องแท่นเล่นแผ่นเสียง (Turntable Showcase) */
+.turntable-showcase {
+  background: var(--bg-paper);
+  border: 1.5px solid var(--border-color);
+  border-radius: 26px;
+  padding: 2rem 1.4rem 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.turntable-showcase:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+}
+
+/* ของตกแต่งลอยรอบแผ่นเสียง (โน้ตดนตรี ดาว หัวใจ) */
+.music-deco-item {
+  position: absolute;
+  color: var(--accent);
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-size: 1.45rem;
+  pointer-events: none;
+  opacity: 0.25;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  user-select: none;
+}
+
+.deco-note-1 { top: 16px; left: 20px; animation: floatMusicDeco 3.2s infinite ease-in-out; }
+.deco-note-2 { top: 28px; right: 28px; animation: floatMusicDeco 3.8s infinite ease-in-out 0.5s; font-size: 1.6rem; }
+.deco-star-1 { bottom: 95px; left: 24px; animation: floatMusicDeco 3s infinite ease-in-out 1s; font-size: 1.2rem; }
+.deco-heart-1 { bottom: 85px; right: 22px; animation: floatMusicDeco 3.5s infinite ease-in-out 1.5s; }
+.deco-sparkle-1 { top: 90px; left: 16px; animation: floatMusicDeco 4s infinite ease-in-out 0.8s; font-size: 1.1rem; }
+
+.turntable-showcase.playing .music-deco-item {
+  opacity: 0.9;
+  filter: drop-shadow(0 0 4px var(--accent-soft));
+}
+
+@keyframes floatMusicDeco {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(0.95); }
+  50% { transform: translateY(-8px) rotate(10deg) scale(1.1); }
+}
+
+/* แท่นวางแผ่นเสียงและเข็ม (Turntable Deck) */
+.turntable-deck {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+/* แผ่นเสียงขนาดใหญ่ (Large Vinyl Record) */
+.vinyl-record-wrapper {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-record-wrapper:hover {
+  transform: scale(1.025);
+}
+
+.vinyl-record {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+      #141414 0%,
+      #141414 18%,
+      #2c2c2c 19%,
+      #1b1b1b 20%,
+      #292929 32%,
+      #1b1b1b 33%,
+      #2d2d2d 44%,
+      #1c1c1c 45%,
+      #282828 58%,
+      #1e1e1e 59%,
+      #2c2c2c 70%,
+      #1a1a1a 71%,
+      #282828 85%,
+      #141414 86%,
+      #222222 96%,
+      #111111 100%);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26), inset 0 0 5px rgba(255, 255, 255, 0.15);
+  animation: smoothVinylSpin 7s linear infinite;
+  animation-play-state: paused;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.4s ease;
+}
+
+.turntable-showcase.playing .vinyl-record {
+  animation-play-state: running;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32), 0 0 18px var(--primary-soft);
+}
+
+@keyframes smoothVinylSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ร่องเสียงบนแผ่นไวนิล (Concentric Groove Rings) */
+.vinyl-groove-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.ring-1 { width: 75%; height: 75%; }
+.ring-2 { width: 55%; height: 55%; }
+.ring-3 { width: 40%; height: 40%; }
+
+/* ป้ายสติกเกอร์ตรงกลางแผ่นเสียง */
+.vinyl-center-label {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, var(--primary) 100%);
+  border: 3.5px solid #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.vinyl-center-hole {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.vinyl-center-heart {
+  position: absolute;
+  top: 10px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.95);
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   เข็มแผ่นเสียง (Turntable Tonearm)
+   ------------------------------------------------------------------------- */
+.turntable-tonearm {
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  width: 52px;
+  height: 125px;
+  z-index: 10;
+  pointer-events: none;
+  transform-origin: 26px 14px;
+  transform: rotate(-34deg);
+  transition: transform 0.65s cubic-bezier(0.34, 1.45, 0.64, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
+}
+
+.turntable-showcase.playing .turntable-tonearm {
+  transform: rotate(10deg);
+}
+
+/* ฐานหมุนเข็ม (Pivot Base) */
+.tonearm-base {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 30%, #D8D8D8 35%, #9E9E9E 100%);
+  border: 2px solid var(--border-color);
+  position: absolute;
+  top: 0;
+  left: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ก้านเข็มโลหะ (Arm Stick) */
+.tonearm-stick {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  width: 4.5px;
+  height: 72px;
+  background: linear-gradient(to right, #FFFFFF, #CCCCCC 60%, #999999);
+  border-radius: 2px;
+}
+
+/* ข้อศอกหักมุม (Elbow Bend) */
+.tonearm-elbow {
+  position: absolute;
+  top: 86px;
+  left: 18px;
+  width: 4.5px;
+  height: 20px;
+  background: linear-gradient(to right, #FFFFFF, #CCCCCC 60%, #999999);
+  border-radius: 2px;
+  transform: rotate(26deg);
+}
+
+/* หัวเข็ม Cartridge */
+.tonearm-head {
+  position: absolute;
+  top: 102px;
+  left: 9px;
+  width: 15px;
+  height: 22px;
+  background: var(--text-primary);
+  border-radius: 3px;
+  transform: rotate(26deg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* ปลายเข็ม Stylus */
+.tonearm-needle {
+  position: absolute;
+  bottom: -3px;
+  left: 5.5px;
+  width: 3.5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* -------------------------------------------------------------------------
+   ข้อมูลเพลงและปุ่มควบคุมรอบแผ่นเสียง
+   ------------------------------------------------------------------------- */
+.turntable-info-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.turntable-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.turntable-artist {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.turntable-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+/* ปุ่ม Play / Pause ทรงแคปซูลเด่น */
+.btn-play-pause {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.65rem 1.6rem;
+  border-radius: 25px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1.5px solid transparent;
+}
+
+.btn-play-pause:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: var(--shadow-md);
+}
+
+.turntable-showcase.playing .btn-play-pause {
+  background-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(255, 123, 154, 0.35);
+}
+
+.play-icon {
+  font-size: 0.9rem;
+}
+
+.btn-search-listen {
+  padding: 0.55rem 1.1rem;
+  font-family: 'Mali', sans-serif;
+  font-weight: 500;
+}
+
+.music-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* -------------------------------------------------------------------------
+   7. Today's Little Moment (Scrapbook Polaroid Frame)
+   ------------------------------------------------------------------------- */
+.photo-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.polaroid-frame {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-color);
+  padding: 1rem 1rem 1.6rem 1rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(-1deg) scale(1.015);
+  box-shadow: var(--shadow-md);
+}
+
+.polaroid-img-box {
+  width: 100%;
+  height: 210px;
+  background-color: var(--bg-paper);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px dashed var(--accent-border);
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.polaroid-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  font-family: 'Mali', sans-serif;
+  padding: 1.5rem;
+}
+
+.polaroid-caption {
+  margin-top: 1rem;
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.35rem;
+  color: var(--text-secondary);
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  outline: none;
+}
+
+.polaroid-caption:focus {
+  color: var(--accent);
+}
+
+.photo-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------------------------
+   8. Responsive Adjustments
+   ------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .mood-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-title {
+    font-size: 1.7rem;
+  }
+  .quote-card {
+    padding: 1.6rem 1.2rem;
+  }
+  .quote-text-en {
+    font-size: 1.35rem;
+  }
+  .quote-text-th {
+    font-size: 0.95rem;
+  }
+  .mood-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .mood-btn {
+    padding: 0.8rem 0.2rem;
+  }
+  .mood-doodle-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .mood-label {
+    font-size: 0.72rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   9. Cute Scrapbook Footer (แถบปิดท้ายหน้าไดอารี่น่ารัก)
+   ------------------------------------------------------------------------- */
+.page-footer {
+  margin-top: 1.2rem;
+  padding: 1.8rem 1rem 1rem 1rem;
+  border-top: 1.5px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  user-select: none;
+}
+
+.footer-sparkle {
+  color: var(--accent);
+  font-size: 1.15rem;
+  letter-spacing: 4px;
+}
+
+.footer-text {
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-size: 1.35rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-heart {
+  color: var(--accent);
+  display: inline-block;
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+
+.footer-subtext {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

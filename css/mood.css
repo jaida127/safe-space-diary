@@ -1,0 +1,273 @@
+/* ==========================================================================
+   MOOD.CSS - Safe Space ♡ (Cute Scrapbook & Pinterest Style)
+   ระบบบันทึกและสถิติอารมณ์ สไตล์ Scrapbook นุ่มนวล อบอุ่น
+   ========================================================================== */
+
+.mood-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------
+   1. Mood Stats Overview Cards
+   ------------------------------------------------------------------------- */
+.mood-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.mood-stat-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.mood-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* -------------------------------------------------------------------------
+   2. Mood Calendar Matrix
+   ------------------------------------------------------------------------- */
+.mood-matrix-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 26px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.mood-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.matrix-cell {
+  background: var(--bg-paper);
+  border: 1px dashed var(--border-color);
+  border-radius: 16px;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.matrix-cell:hover {
+  transform: scale(1.06);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.matrix-day-num {
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.matrix-mood-emoji {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------
+   3. Mood Breakdown & Gentle Insights (2 Columns)
+   ------------------------------------------------------------------------- */
+.mood-details-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.mood-breakdown-card,
+.mood-insight-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 26px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Mali', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.breakdown-bar-track {
+  height: 12px;
+  background: var(--bg-primary);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.breakdown-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gentle-insight-text {
+  font-family: 'Mali', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-top: 1rem;
+  background: var(--bg-paper);
+  padding: 1.2rem 1.4rem;
+  border-radius: 18px;
+  border: 1.5px dashed var(--accent-border);
+}
+
+.insight-doodle {
+  margin-top: 1rem;
+  text-align: right;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* -------------------------------------------------------------------------
+   4. Mood Check-in Box on Page
+   ------------------------------------------------------------------------- */
+.mood-quick-checkin-card {
+  background: var(--bg-card);
+  border: 2px dashed var(--accent-border);
+  border-radius: 26px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+.mood-selector-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+}
+
+.mood-btn-choice {
+  background: var(--bg-paper);
+  border: 1.5px solid var(--border-color);
+  border-radius: 18px;
+  padding: 0.8rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mood-btn-choice:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent-border);
+  background: var(--primary-soft);
+}
+
+.mood-btn-choice.active {
+  background: var(--primary-soft);
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(255, 123, 154, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.mood-btn-choice .mood-emoji {
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+.mood-btn-choice:hover .mood-emoji {
+  transform: scale(1.2);
+}
+
+.mood-btn-choice .mood-name {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+}
+
+.mood-note-input {
+  width: 100%;
+  border: 1.5px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  font-family: 'Mali', sans-serif;
+  font-size: 0.92rem;
+  background: var(--bg-paper);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.mood-note-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 123, 154, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mood-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .mood-details-row {
+    grid-template-columns: 1fr;
+  }
+  .mood-selector-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .mood-matrix-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

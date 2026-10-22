@@ -1,0 +1,355 @@
+/* ==========================================================================
+   BASE.CSS - Safe Space ♡ (Cute Scrapbook & Pinterest Aesthetic)
+   ฟอนต์, การรีเซ็ตค่าเริ่มต้น, ลวดลายพื้นหลัง Polka Dot, และโครงสร้างหลัก
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. Google Fonts Import
+   - Caveat & Dancing Script: ฟอนต์ลายมือน่ารักสไตล์ไดอารี่
+   - Mali: ฟอนต์ภาษาไทยสไตล์ลายมือน่ารัก อบอุ่น สบายตา
+   - Prompt & Inter: ฟอนต์คลีนโมเดิร์นสำหรับเนื้อหาหลักที่ต้องการความชัดเจน
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Mali:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Prompt:wght@300;400;500;600&display=swap');
+
+/* -------------------------------------------------------------------------
+   2. Reset & Box Sizing
+   ------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Prompt', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  background-image: var(--bg-pattern);
+  background-size: var(--bg-pattern-size);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* รองรับการเปลี่ยนรูปแบบฟอนต์ตามการตั้งค่า */
+[data-font="handwritten"] body,
+[data-font="handwritten"] h1,
+[data-font="handwritten"] h2,
+[data-font="handwritten"] h3,
+[data-font="handwritten"] h4,
+[data-font="handwritten"] h5,
+[data-font="handwritten"] h6,
+[data-font="handwritten"] button,
+[data-font="handwritten"] input,
+[data-font="handwritten"] textarea {
+  font-family: 'Mali', 'Caveat', cursive, sans-serif !important;
+}
+
+[data-font="clean"] body,
+[data-font="clean"] h1,
+[data-font="clean"] h2,
+[data-font="clean"] h3,
+[data-font="clean"] h4,
+[data-font="clean"] h5,
+[data-font="clean"] h6,
+[data-font="clean"] button,
+[data-font="clean"] input,
+[data-font="clean"] textarea {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* -------------------------------------------------------------------------
+   3. Cute Handwritten & Typography Classes
+   ------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+/* ลายมือน่ารักภาษาอังกฤษ */
+.handwritten {
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-size: 1.35rem;
+  color: var(--accent);
+}
+
+.script-title {
+  font-family: 'Dancing Script', 'Caveat', cursive;
+  font-weight: 700;
+}
+
+/* ฟอนต์ภาษาไทยสไตล์ลายมือน่ารัก */
+.thai-cute {
+  font-family: 'Mali', 'Prompt', cursive, sans-serif;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+
+/* -------------------------------------------------------------------------
+   4. Scrapbook Decorative Background Floatings
+   ประกายดาวและหัวใจจิ๋วประดับพื้นหลังแบบนุ่มนวล
+   ------------------------------------------------------------------------- */
+.floating-sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  animation: floatDoodle 8s infinite ease-in-out alternate;
+}
+
+@keyframes floatDoodle {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+  100% { transform: translateY(6px) rotate(-6deg); }
+}
+
+/* -------------------------------------------------------------------------
+   5. App Layout Container
+   ------------------------------------------------------------------------- */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sidebar (Desktop) */
+.sidebar {
+  width: 275px;
+  background-color: var(--bg-card);
+  border-right: 1.5px dashed var(--border-color);
+  padding: 2.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-brand {
+  margin-bottom: 2rem;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.brand-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-primary);
+}
+
+.brand-heart {
+  color: var(--accent);
+  display: inline-block;
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+
+.brand-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-top: 0.1rem;
+}
+
+/* เมนูหลักใน Sidebar */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.72rem 1rem;
+  border-radius: 16px;
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  font-weight: 400;
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: var(--primary-soft);
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.nav-link.active {
+  background-color: var(--primary-soft);
+  color: var(--accent);
+  font-weight: 500;
+  border: 1px solid var(--accent-border);
+}
+
+.nav-link.active::after {
+  content: '♡';
+  position: absolute;
+  right: 14px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: var(--border-light);
+  border-top: 1px dashed var(--border-color);
+  margin: 0.8rem 0;
+}
+
+.nav-subhead {
+  font-family: 'Mali', sans-serif;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  padding: 0.2rem 1rem;
+}
+
+/* Sidebar Footer (Theme controls) */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1.2rem;
+  border-top: 1.5px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 2.2rem 3rem 1.8rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Mobile Bottom Navigation */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 0.6rem 0.5rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-item.active {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.bottom-nav-item .icon {
+  font-size: 1.35rem;
+}
+
+/* -------------------------------------------------------------------------
+   6. Keyframe Animations
+   ------------------------------------------------------------------------- */
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.18); opacity: 1; }
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes sparkleGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px var(--accent)); }
+  50% { filter: drop-shadow(0 0 8px var(--accent)); }
+}
+
+@keyframes fadeInPaper {
+  from { opacity: 0; transform: translateY(6px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.fade-in {
+  animation: fadeInPaper 0.4s ease forwards;
+}
+
+/* -------------------------------------------------------------------------
+   7. Responsive
+   ------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1.8rem 1.8rem 2.5rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    padding: 1.2rem 1.2rem 5.5rem 1.2rem;
+  }
+  .bottom-nav {
+    display: flex;
+  }
+}

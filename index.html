@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Space ♡ | พื้นที่สบายใจ</title>
+
+  <!-- สไตล์ชีตแบ่งตามหน้าที่ สไตล์ Scrapbook & Pinterest Aesthetic -->
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/home.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Cute Sparkles & Stars (ประกายดาวจิ๋วประดับพื้นหลัง) -->
+  <div class="floating-sparkle" style="top: 12%; left: 24%; font-size: 1.5rem;">✦</div>
+  <div class="floating-sparkle" style="top: 38%; right: 5%; font-size: 1.2rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 75%; left: 20%; font-size: 1.3rem; animation-delay: 4s;">♡</div>
+  <div class="floating-sparkle" style="top: 85%; right: 8%; font-size: 1.6rem; animation-delay: 1.5s;">✦</div>
+
+  <div class="app-container">
+    
+    <!-- ====================================================================
+         1. SIDEBAR (เดสก์ท็อป: สมุดโน้ตขอบเส้นประ)
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">“A little place to come back to yourself.”</p>
+      </div>
+
+      <!-- เมนูหลัก -->
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link active">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="journal.html" class="nav-link">
+            <span class="nav-icon">📖</span>
+            <span>Journal</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html" class="nav-link">
+            <span class="nav-icon">📅</span>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="mood.html" class="nav-link">
+            <span class="nav-icon">🌷</span>
+            <span>Mood</span>
+          </a>
+        </li>
+        <li>
+          <a href="memories.html" class="nav-link">
+            <span class="nav-icon">📸</span>
+            <span>Memories</span>
+          </a>
+        </li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li>
+          <a href="letters.html" class="nav-link">
+            <span class="nav-icon">💌</span>
+            <span>Letters</span>
+          </a>
+        </li>
+        <li>
+          <a href="garden.html" class="nav-link">
+            <span class="nav-icon">🌱</span>
+            <span>Garden</span>
+          </a>
+        </li>
+        <li>
+          <a href="myyear.html" class="nav-link">
+            <span class="nav-icon">📊</span>
+            <span>My Year</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- แผงเลือก 7 ธีมสีสไตล์ Scrapbook -->
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container">
+          <!-- เรนเดอร์ปุ่มเลือกธีมทั้ง 7 และปุ่ม Surprise Me จาก js/themes.js อัตโนมัติ -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT (พื้นที่สมุดบันทึกหลัก)
+         ==================================================================== -->
+    <main class="main-content">
+      
+      <!-- แถบบน: วันที่ เวลา และปุ่มสุ่มธีม -->
+      <header class="top-header">
+        <div class="date-display">
+          <span class="date-text" id="current-date">Saturday, September 26, 2026</span>
+          <span class="time-text">เวลานี้คือเวลาของคุณ <span id="current-time">22:30</span> น. ♡</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-sm btn-outline" onclick="ThemeManager.surpriseMe()">
+            ✨ Surprise Me!
+          </button>
+        </div>
+      </header>
+
+      <!-- ส่วนที่ 1: Welcome (อบอุ่น เป็นกันเอง สไตล์ Soft Girl) -->
+      <section class="welcome-section fade-in">
+        <span class="welcome-badge">just for you ♡</span>
+        <h2 class="welcome-title">
+          <span>Safe Space</span> 
+          <span class="brand-heart">♡</span>
+          <span style="font-size: 1.15rem; font-weight: 400; color: var(--text-muted);">( พื้นที่สบายใจ )</span>
+        </h2>
+        <p class="welcome-tagline">
+          <span>✦</span> A little place to come back to yourself. <span>✦</span>
+        </p>
+      </section>
+
+      <!-- ส่วนที่ 2: Healing Quote Card (หัวใจหลัก: สไตล์กระดาษไดอารี่แปะเทปวาชิ) -->
+      <section class="quote-card fade-in">
+        <!-- เทปวาชิคาดหัวกระดาษ -->
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/star.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="star sticker">
+
+        <div class="quote-header">
+          <div class="quote-category-tag" id="quote-category-tag">
+            <span>🌸</span> <span>Gentle Reminder</span>
+          </div>
+          <span class="quote-doodle-star">✦ ✧ ✦</span>
+        </div>
+
+        <div class="quote-content" id="quote-content">
+          <p class="quote-text-en">“You don't have to have everything figured out today.”</p>
+          <p class="quote-text-th">“ไม่เป็นไรนะ ถ้าวันนี้เรายังหาคำตอบให้กับทุกเรื่องไม่ได้”</p>
+        </div>
+
+        <div class="quote-footer">
+          <span class="quote-author-note">from a warm friend ♡</span>
+          <button class="btn btn-sm btn-soft" id="btn-new-quote">
+            ♡ Another reminder
+          </button>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 3: Today's Mood (สติกเกอร์ดูเดิลลายเส้นน่ารัก 8 อารมณ์) -->
+      <section class="mood-section card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">🌷 How are you feeling today?</h3>
+            <p class="card-subtitle">วันนี้หัวใจเป็นอย่างไรบ้างคะ? แตะสติกเกอร์ที่ตรงกับใจวันนี้ได้เลยนะ</p>
+          </div>
+          <span class="sticker-badge">daily check-in</span>
+        </div>
+
+        <div class="mood-grid">
+          
+          <!-- 1. Happy (ดวงอาทิตย์ยิ้มละมุน) -->
+          <button class="mood-btn" data-mood="happy">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="24" r="13" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.8 9.8l2.8 2.8M35.4 35.4l2.8 2.8M9.8 38.2l2.8-2.8M35.4 12.6l2.8-2.8" stroke="var(--accent)"/>
+                <circle cx="20" cy="22" r="1.5" fill="var(--text-primary)"/>
+                <circle cx="28" cy="22" r="1.5" fill="var(--text-primary)"/>
+                <path d="M19 26.5c1.2 2 3.5 3 5 3s3.8-1 5-3" stroke="var(--text-primary)"/>
+                <ellipse cx="17.5" cy="25" rx="1.8" ry="1" fill="#FFCCD7" stroke="none"/>
+                <ellipse cx="30.5" cy="25" rx="1.8" ry="1" fill="#FFCCD7" stroke="none"/>
+              </svg>
+            </div>
+            <span class="mood-label">Happy</span>
+          </button>
+
+          <!-- 2. Calm (เมฆกับพระจันทร์พักผ่อน) -->
+          <button class="mood-btn" data-mood="calm">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 36h20a8 8 0 0 0 1.5-15.8 10 10 0 0 0-19.5-2.2A7 7 0 0 0 14 36z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <path d="M30 14a6 6 0 1 0 7 7c-.5.1-1 .1-1.5 0a5.5 5.5 0 0 1-5.5-7z" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <path d="M20 28c1 1 3 1 4 0" stroke="var(--text-primary)"/>
+                <circle cx="17.5" cy="26" r="1.2" fill="var(--text-primary)"/>
+                <circle cx="24.5" cy="26" r="1.2" fill="var(--text-primary)"/>
+              </svg>
+            </div>
+            <span class="mood-label">Calm</span>
+          </button>
+
+          <!-- 3. Loved (หัวใจฟูมีปีกและประกาย) -->
+          <button class="mood-btn" data-mood="loved">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 37s-13-8.5-13-17a7 7 0 0 1 12-4.5A7 7 0 0 1 35 20c0 8.5-13 17-13 17z" fill="var(--primary-soft)" stroke="var(--accent)"/>
+                <circle cx="20" cy="19" r="1.2" fill="var(--text-primary)"/>
+                <circle cx="28" cy="19" r="1.2" fill="var(--text-primary)"/>
+                <path d="M22 22.5c1 1.2 3 1.2 4 0" stroke="var(--text-primary)"/>
+                <ellipse cx="18" cy="21.5" rx="1.5" ry="1" fill="#FFCCD7" stroke="none"/>
+                <ellipse cx="30" cy="21.5" rx="1.5" ry="1" fill="#FFCCD7" stroke="none"/>
+                <path d="M8 14l3 2M37 14l3-2" stroke="var(--accent)"/>
+              </svg>
+            </div>
+            <span class="mood-label">Loved</span>
+          </button>
+
+          <!-- 4. Peaceful (ดาวนุ่มบนก้อนเมฆ) -->
+          <button class="mood-btn" data-mood="peaceful">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 36h24a7 7 0 0 0 1-13.8 9 9 0 0 0-17.5-2.2A6 6 0 0 0 12 36z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <path d="M28 10l1.8 3.5 3.8.5-2.8 2.6.7 3.8L28 18.5l-3.5 1.9.7-3.8-2.8-2.6 3.8-.5z" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <path d="M19 28c1 1 3 1 4 0" stroke="var(--text-primary)"/>
+              </svg>
+            </div>
+            <span class="mood-label">Peaceful</span>
+          </button>
+
+          <!-- 5. Tired (แมวง่วงนอน Zzz) -->
+          <button class="mood-btn" data-mood="tired">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 20l-4-7 8 2.5a14 14 0 0 1 12 0l8-2.5-4 7c3 3 4 7 4 11 0 7-6 12-14 12s-14-5-14-12c0-4 1-8 4-11z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <path d="M18 28c1-1 3-1 4 0M26 28c1-1 3-1 4 0" stroke="var(--text-primary)"/>
+                <path d="M33 11l4-3M38 12l3-2" stroke="var(--accent)" stroke-width="2"/>
+                <circle cx="24" cy="33" r="1.5" fill="var(--text-secondary)"/>
+              </svg>
+            </div>
+            <span class="mood-label">Tired</span>
+          </button>
+
+          <!-- 6. Emotional (เมฆที่มีประกายหยดน้ำตา) -->
+          <button class="mood-btn" data-mood="emotional">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 34h22a7 7 0 0 0 2-13.7 9 9 0 0 0-17.5-2.3A6 6 0 0 0 13 34z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <circle cx="20" cy="24" r="2" fill="var(--text-primary)"/>
+                <circle cx="28" cy="24" r="2" fill="var(--text-primary)"/>
+                <path d="M22 28.5c1-.8 3-.8 4 0" stroke="var(--text-primary)"/>
+                <path d="M30 30c0 1.5-1 2.5-2 2.5s-2-1-2-2.5c0-1 2-3 2-3s2 2 2 3z" fill="#7EAEC9" stroke="none"/>
+              </svg>
+            </div>
+            <span class="mood-label">Emotional</span>
+          </button>
+
+          <!-- 7. Sad (เมฆฝนหยดเบาๆ) -->
+          <button class="mood-btn" data-mood="sad">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 28h20a7 7 0 0 0 1.5-13.8 9 9 0 0 0-17.5-2.2A6 6 0 0 0 14 28z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <circle cx="20" cy="21" r="1.2" fill="var(--text-primary)"/>
+                <circle cx="28" cy="21" r="1.2" fill="var(--text-primary)"/>
+                <path d="M21 25c1.5-1 4.5-1 6 0" stroke="var(--text-primary)"/>
+                <path d="M18 34l-2 5M24 34l-2 5M30 34l-2 5" stroke="#7EAEC9" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <span class="mood-label">Sad</span>
+          </button>
+
+          <!-- 8. Frustrated (ดูเดิลเมฆป่วน/สายฟ้าจิ๋ว) -->
+          <button class="mood-btn" data-mood="frustrated">
+            <div class="mood-doodle-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 28h20a7 7 0 0 0 1.5-13.8 9 9 0 0 0-17.5-2.2A6 6 0 0 0 14 28z" fill="var(--primary-soft)" stroke="var(--primary)"/>
+                <path d="M18 19l4 2M30 19l-4 2" stroke="var(--text-primary)"/>
+                <path d="M21 24.5h6" stroke="var(--text-primary)"/>
+                <path d="M24 32l-2 4h4l-2 5" stroke="var(--accent)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="mood-label">Frustrated</span>
+          </button>
+
+        </div>
+
+        <!-- กล่องบันทึกเหตุผลสั้นๆ -->
+        <div class="mood-note-box" id="mood-note-box" style="display: none;">
+          <label class="input-label" for="mood-note">💭 Want to tell yourself why? (อยากบันทึกให้ตัวเองฟังไหมคะ):</label>
+          <textarea id="mood-note" class="form-control" placeholder="เช่น วันนี้เหนื่อยจากการเรียน แต่ก็รู้สึกดีที่ทำงานเสร็จ..."></textarea>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 4: Why Safe Space? (การ์ด Scrapbook Sticky Memo) -->
+      <section class="why-section">
+        <h3 class="section-title">
+          <span>Why this space exists ♡</span>
+        </h3>
+        <p class="section-subtitle">“บางครั้งเราใช้เวลาทั้งวันรับมือกับหลายสิ่ง จนลืมหันกลับมาถามตัวเองว่า จริง ๆ แล้ววันนี้เรารู้สึกอย่างไร?”</p>
+        
+        <div class="why-grid">
+          <div class="why-card">
+            <span class="why-icon">🪞</span>
+            <h4 class="why-title">Understand Yourself</h4>
+            <p class="why-desc">เข้าใจตัวเองมากขึ้น ใช้การเขียนและทบทวนสิ่งที่เกิดขึ้นในแต่ละวันอย่างอ่อนโยน</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">🌷</span>
+            <h4 class="why-title">Understand Your Feelings</h4>
+            <p class="why-desc">รู้เท่าทันอารมณ์ของตัวเอง สังเกตว่าแต่ละวันเรารู้สึกอย่างไรและโอบกอดมันไว้</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">📖</span>
+            <h4 class="why-title">Keep Your Memories</h4>
+            <p class="why-desc">เก็บเรื่องราวและความทรงจำ บันทึกข้อความ รูปภาพ เพลง และช่วงเวลาเล็ก ๆ</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">🌱</span>
+            <h4 class="why-title">Grow at Your Own Pace</h4>
+            <p class="why-desc">เติบโตในแบบของตัวเอง มองย้อนกลับไปเพื่อเห็นการเปลี่ยนแปลงโดยไม่ต้องแข่งกับใคร</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 5-8: Two-Column Dashboard Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- ฝั่งซ้าย: Quick Journal + Memory of the Day (รูปภาพ) -->
+        <div class="dashboard-col">
+          
+          <!-- ส่วนที่ 5: Quick Journal (สมุดโน้ตมีเส้น Lined Paper) -->
+          <div class="card notebook-paper-style">
+            <div class="washi-tape washi-tape-left"></div>
+            <img src="assets/stickers/cat.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="cat sticker">
+            <div class="card-header">
+              <h3 class="card-title">📖 Quick Journal</h3>
+              <span class="sticker-badge">my thoughts</span>
+            </div>
+            <div class="quick-journal-box">
+              <label class="input-label">A little space for your thoughts...</label>
+              <textarea id="quick-journal-text" class="form-control" placeholder="What’s on your mind today? (วันนี้มีเรื่องอะไรอยู่ในใจบ้างคะ...)"></textarea>
+              <div style="display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.8rem; flex-wrap: wrap;">
+                <button class="btn btn-sm btn-outline" id="btn-quick-save">
+                  ✨ บันทึกทันที
+                </button>
+                <button class="btn btn-sm btn-primary" id="btn-goto-journal">
+                  เปิดใน Journal เต็มรูปแบบ →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ส่วนที่ 6: Memory of the Day (ภาพโพลารอยด์แปะเทป) -->
+          <div class="card">
+            <div class="washi-tape washi-tape-left"></div>
+            <img src="assets/stickers/bow.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="bow sticker">
+            <div class="card-header">
+              <h3 class="card-title">📸 Today's Little Moment</h3>
+              <span class="card-subtitle">ช่วงเวลาเล็กๆ ของวันนี้</span>
+            </div>
+            <div class="photo-upload-container">
+              <div class="polaroid-frame">
+                <div class="polaroid-img-box" onclick="document.getElementById('photo-input').click()">
+                  <img id="polaroid-img" class="polaroid-img" alt="ความทรงจำของวันนี้">
+                  <div class="polaroid-placeholder" id="polaroid-placeholder">
+                    <span style="font-size: 2.2rem;">📷</span>
+                    <span style="font-size: 0.88rem;">แตะเพื่อเพิ่มรูปภาพของวันนี้</span>
+                  </div>
+                </div>
+                <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                <input type="text" id="polaroid-caption" class="polaroid-caption" placeholder="“A tiny moment worth remembering ♡”">
+              </div>
+
+              <div class="photo-actions">
+                <button class="btn btn-sm btn-outline" onclick="document.getElementById('photo-input').click()">
+                  🖼️ เลือกรูปใหม่
+                </button>
+                <button class="btn btn-sm btn-soft" id="btn-remove-photo" style="display: none;">
+                  ลบรูป
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ฝั่งขวา: Today's Soundtrack (แผ่นเสียง) + Today's Little Things -->
+        <div class="dashboard-col">
+          
+          <!-- ส่วนที่ 7: Song of the Day (เครื่องเล่นแผ่นเสียงวินเทจสไตล์ Scrapbook) -->
+          <div class="card vinyl-player-card">
+            <img src="assets/stickers/headphones.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="headphones sticker">
+            <div class="card-header">
+              <h3 class="card-title">🎧 Today's Soundtrack</h3>
+              <span class="sticker-badge">music vibe</span>
+            </div>
+            <div class="music-card-body">
+              
+              <!-- เครื่องเล่นแผ่นเสียง Turntable Showcase -->
+              <div class="turntable-showcase" id="turntable-box">
+                <!-- โน้ตดนตรี ดาว และหัวใจตกแต่งลอยรอบแผ่นเสียง -->
+                <span class="music-deco-item deco-note-1">♪</span>
+                <span class="music-deco-item deco-note-2">♫</span>
+                <span class="music-deco-item deco-star-1">✦</span>
+                <span class="music-deco-item deco-heart-1">♡</span>
+                <span class="music-deco-item deco-sparkle-1">✧</span>
+
+                <!-- ฐานแท่นเครื่องเล่นแผ่นเสียง -->
+                <div class="turntable-deck">
+                  <!-- แผ่นเสียงขนาดใหญ่ โดดเด่น -->
+                  <div class="vinyl-record-wrapper" id="vinyl-wrapper" title="แตะแผ่นเสียงหรือกดปุ่ม Play เพื่อหมุนเพลง">
+                    <div class="vinyl-record" id="vinyl-record">
+                      <!-- ร่องแผ่นเสียง concentric grooves -->
+                      <div class="vinyl-groove-ring ring-1"></div>
+                      <div class="vinyl-groove-ring ring-2"></div>
+                      <div class="vinyl-groove-ring ring-3"></div>
+                      
+                      <!-- ป้ายสติกเกอร์ตรงกลางแผ่นเสียง -->
+                      <div class="vinyl-center-label">
+                        <span class="vinyl-center-hole"></span>
+                        <span class="vinyl-center-heart">♡</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- เข็มเครื่องเล่นแผ่นเสียง (Tonearm) -->
+                  <div class="turntable-tonearm" id="turntable-tonearm">
+                    <div class="tonearm-base"></div>
+                    <div class="tonearm-stick"></div>
+                    <div class="tonearm-elbow"></div>
+                    <div class="tonearm-head">
+                      <div class="tonearm-needle"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ข้อมูลเพลงและปุ่มควบคุมรอบแผ่นเสียง -->
+                <div class="turntable-info-panel">
+                  <div class="turntable-text">
+                    <h4 class="turntable-title" id="music-preview-title">Pluto Projector</h4>
+                    <p class="turntable-artist" id="music-preview-artist">Rex Orange County</p>
+                  </div>
+
+                  <div class="turntable-controls">
+                    <button class="btn btn-play-pause" id="btn-play-pause" title="Play / Pause">
+                      <span class="play-icon" id="play-pause-icon">▶</span>
+                      <span id="play-pause-text">Play</span>
+                    </button>
+                    <button class="btn btn-sm btn-soft btn-search-listen" id="btn-search-song" title="ค้นหาเพื่อฟังบน YouTube">
+                      🔍 ฟังเพลง
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ช่องสำหรับให้ผู้ใช้พิมพ์เพลงที่ชอบ -->
+              <div class="music-inputs">
+                <input type="text" id="song-title" class="form-control" placeholder="ชื่อเพลงที่ชอบวันนี้ (Song title)">
+                <input type="text" id="song-artist" class="form-control" placeholder="ชื่อศิลปิน (Artist)">
+                <input type="text" id="song-feeling" class="form-control" placeholder="ความรู้สึกที่มีต่อเพลงนี้ (เช่น ฟังสบายๆ ชวนคิดถึงช่วงเวลาสงบ...)">
+              </div>
+            </div>
+          </div>
+
+          <!-- ส่วนที่ 8: Today's Little Things (เช็กลิสต์ความสุขเล็กๆ) -->
+          <div class="card">
+            <img src="assets/stickers/heart.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="heart sticker">
+            <div class="card-header">
+              <h3 class="card-title">✨ Today's Little Things</h3>
+              <span class="card-subtitle">เรื่องเล็กๆ ที่มีความหมาย</span>
+            </div>
+            <div class="little-things-list">
+              <div class="little-thing-item">
+                <span class="little-thing-icon">✨</span>
+                <input type="text" id="lt-grateful" class="little-thing-input" placeholder="One thing I'm grateful for... (เรื่องที่รู้สึกขอบคุณในวันนี้)">
+              </div>
+              <div class="little-thing-item">
+                <span class="little-thing-icon">🌷</span>
+                <input type="text" id="lt-smiled" class="little-thing-input" placeholder="One thing that made me smile... (เรื่องที่ทำให้ยิ้มได้)">
+              </div>
+              <div class="little-thing-item">
+                <span class="little-thing-icon">📚</span>
+                <input type="text" id="lt-learned" class="little-thing-input" placeholder="One thing I learned... (สิ่งใหม่ที่ได้เรียนรู้)">
+              </div>
+              <div class="little-thing-item">
+                <span class="little-thing-icon">💭</span>
+                <input type="text" id="lt-thinking" class="little-thing-input" placeholder="One thing I'm thinking about... (เรื่องที่กำลังคิดวนเวียนอยู่)">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- แถบปิดท้ายสไตล์ไดอารี่น่ารัก (Cute Scrapbook Footer) -->
+      <footer class="page-footer">
+        <span class="footer-sparkle">✦ ✧ ✦</span>
+        <p class="footer-text">
+          Safe Space <span class="footer-heart">♡</span> A little place to come back to yourself
+        </p>
+        <p class="footer-subtext">
+          take your time, breathe deeply, and be gentle with yourself today ♡
+        </p>
+      </footer>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAVIGATION (จอมือถือ)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item active">
+        <span class="icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="journal.html" class="bottom-nav-item">
+        <span class="icon">📖</span>
+        <span>Journal</span>
+      </a>
+      <a href="calendar.html" class="bottom-nav-item">
+        <span class="icon">📅</span>
+        <span>Calendar</span>
+      </a>
+      <a href="mood.html" class="bottom-nav-item">
+        <span class="icon">🌷</span>
+        <span>Mood</span>
+      </a>
+      <a href="memories.html" class="bottom-nav-item">
+        <span class="icon">📸</span>
+        <span>Memories</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/quotes.js?v=4"></script>
+  <script src="js/home.js?v=4"></script>
+
+</body>
+</html>

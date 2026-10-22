@@ -1,0 +1,553 @@
+/* ==========================================================================
+   LETTERS.CSS — Dear Future Me 💌 (Safe Space ♡)
+   สไตล์หน้าจดหมายถึงตัวเองในอนาคต: ซองจดหมาย, ฟอร์มเขียน, อ่านจดหมาย
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. PAGE HEADER
+   ------------------------------------------------------------------------- */
+.letters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.letters-header-left h2 {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.letters-header-left p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* -------------------------------------------------------------------------
+   2. FILTER TABS — ทั้งหมด / ปลดล็อกแล้ว / ยังล็อกอยู่ / โปรด
+   ------------------------------------------------------------------------- */
+.letters-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.letters-filter-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Prompt', sans-serif;
+}
+
+.letters-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.letters-filter-btn.active {
+  background: var(--primary);
+  color: var(--button-text);
+  border-color: var(--primary);
+}
+
+/* -------------------------------------------------------------------------
+   3. ENVELOPE CARDS GRID
+   ------------------------------------------------------------------------- */
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ซองจดหมายแต่ละซอง */
+.envelope-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.envelope-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ฝาซอง (สามเหลี่ยมด้านบน) */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--primary-soft);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  opacity: 0.5;
+}
+
+/* ตราประทับ (stamp) */
+.envelope-stamp {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 42px;
+  height: 50px;
+  background: var(--bg-secondary);
+  border: 2px dashed var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.envelope-body {
+  margin-top: 30px;
+}
+
+.envelope-subject {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.envelope-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.envelope-date-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.envelope-mood-badge {
+  font-size: 0.8rem;
+}
+
+/* เส้นที่อยู่ (decorative lines) */
+.envelope-lines {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.envelope-line {
+  height: 2px;
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.envelope-line:nth-child(2) { width: 75%; }
+.envelope-line:nth-child(3) { width: 50%; }
+
+/* --- ล็อก / ปลดล็อก --- */
+.envelope-card.locked {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.envelope-card.locked:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.envelope-lock-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--bg-secondary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ซองที่ปลดล็อกแล้ว — มี glow */
+.envelope-card.unlocked {
+  border-color: var(--primary);
+}
+
+.envelope-card.unlocked::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: var(--primary);
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* badge โปรด */
+.envelope-fav {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 4px rgba(255,100,130,0.4));
+}
+
+/* -------------------------------------------------------------------------
+   4. WRITE LETTER MODAL — ฟอร์มเขียนจดหมาย
+   ------------------------------------------------------------------------- */
+.letter-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+}
+
+.letter-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.letter-modal-paper {
+  position: relative;
+  background: var(--bg-paper, var(--bg-card));
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: letterSlideUp 0.35s ease;
+}
+
+@keyframes letterSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.letter-modal-paper .washi-tape {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 120px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--washi-tape);
+  z-index: 2;
+}
+
+.letter-modal-title {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.letter-form-group {
+  margin-bottom: 1.2rem;
+}
+
+.letter-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.letter-form-group input[type="text"],
+.letter-form-group input[type="date"],
+.letter-form-group textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.letter-form-group input:focus,
+.letter-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.letter-form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: 'Mali', 'Caveat', cursive;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* checkbox เปิดอ่านเลย */
+.letter-immediate-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.letter-immediate-check input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+}
+
+/* Mood picker ในฟอร์ม */
+.letter-mood-picker {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.letter-mood-option {
+  padding: 0.4rem 0.8rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--bg-card);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.letter-mood-option:hover {
+  border-color: var(--primary);
+}
+
+.letter-mood-option.selected {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ปุ่มบันทึก */
+.letter-form-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.letter-btn-save {
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.letter-btn-save:hover {
+  background: var(--button-hover);
+}
+
+.letter-btn-cancel {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border-color);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.letter-btn-cancel:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------------------------
+   5. READ LETTER MODAL — อ่านจดหมาย
+   ------------------------------------------------------------------------- */
+.read-letter-content {
+  position: relative;
+}
+
+.read-letter-date {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.read-letter-subject {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.read-letter-mood {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.read-letter-body {
+  font-family: 'Mali', 'Caveat', cursive;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 2;
+  white-space: pre-wrap;
+  /* เส้นประ dotted lines */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 1.95rem,
+    var(--border-color) 1.95rem,
+    var(--border-color) 2rem
+  );
+  padding: 0.2rem 0;
+}
+
+.read-letter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.read-letter-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.read-letter-actions button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.read-letter-actions .btn-fav.is-fav {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.read-letter-actions .btn-delete-letter:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* -------------------------------------------------------------------------
+   6. EMPTY STATE
+   ------------------------------------------------------------------------- */
+.letters-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.letters-empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.letters-empty p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.letters-empty .btn-primary {
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------
+   7. MODAL CLOSE BUTTON
+   ------------------------------------------------------------------------- */
+.letter-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 5;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.letter-close-btn:hover {
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------------------------
+   8. RESPONSIVE
+   ------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .letters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .letter-modal-paper {
+    padding: 1.5rem 1.2rem;
+    margin: 0.5rem;
+  }
+
+  .letters-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

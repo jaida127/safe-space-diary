@@ -1,0 +1,1367 @@
+ช่วยปรับเฉพาะส่วน **Song of the Day**
+
+* ทำรูปแผ่นเสียงให้ใหญ่ขึ้นและเป็นจุดเด่นของส่วนเพลง
+* เมื่อกด Play ให้แผ่นเสียงหมุนแบบ smooth
+* เมื่อกด Pause ให้แผ่นเสียงหยุดหมุน
+* เพิ่มเข็มแผ่นเสียงเล็ก ๆ ให้ดูเหมือนเครื่องเล่นจริง
+* จัดชื่อเพลง ศิลปิน และปุ่ม Play/Pause ให้อยู่รอบแผ่นเสียงอย่างสวยงาม
+* เพิ่ม decoration เล็ก ๆ เช่น โน้ตดนตรี ดาว หรือหัวใจ ให้เข้ากับธีม
+
+**ไม่ต้องแก้ส่วนอื่นของเว็บไซต์**
+ช่วยปรับปรุงเว็บไซต์ **Safe Space ♡ / พื้นที่สบายใจ** ใน Phase 1 โดยคงโครงสร้างและฟังก์ชันหลักเดิมไว้ แต่ปรับดีไซน์ให้มีเอกลักษณ์ น่ารัก และมีชีวิตชีวามากขึ้น เพราะดีไซน์ปัจจุบันสีค่อนข้างจืดและดูเรียบเกินไป
+
+### 1. Mood & Aesthetic
+
+อยากได้บรรยากาศแบบ
+
+**Pinterest aesthetic × Cute Digital Diary × Cozy Scrapbook × Soft Girl × Personal Safe Space**
+
+ความรู้สึกที่อยากได้:
+
+* อบอุ่น
+* น่ารัก
+* สบายตา
+* เป็นพื้นที่ส่วนตัว
+* เหมือนสมุดไดอารีดิจิทัล
+* มีความ dreamy และ cozy
+* ทันสมัย
+* มีความเป็นวัยรุ่น
+* น่ารักแบบ Pinterest ไม่เด็กเกินไป
+* ไม่หวานจนเลี่ยน
+* ไม่รก
+* ไม่ดูเหมือนเว็บไซต์ Mental Health แบบทางการ
+
+---
+
+## 2. ปรับสี Theme ให้ชัดและน่ารักขึ้น
+
+ปัจจุบันสีดูจืดเกินไป อยากให้แต่ละ Theme มีสีที่เห็นความแตกต่างชัดเจน และมี accent color ที่เด่นขึ้น โดยยังคงความสบายตา
+
+### 🎀 Pink Polka
+
+* Bubblegum Pink
+* Blush Pink
+* Cream
+* Cherry Pink
+* Soft Brown
+* ใช้ลาย Polka Dot เป็นองค์ประกอบหลัก
+
+### 🩵 Baby Blue
+
+* Baby Blue
+* Powder Blue
+* White / Ivory
+* Medium Blue
+* Soft Gray
+* เพิ่มลาย Polka Dot หรือ Checker เล็ก ๆ
+
+### 💜 Lavender
+
+* Lavender
+* Lilac
+* Cream
+* Soft Purple
+* Muted Pink
+
+### 🍃 Pistachio
+
+* Pistachio Green
+* Cream
+* Warm Beige
+* Soft Green
+* Darker Green สำหรับ accent
+
+### 🍓 Strawberry
+
+* Strawberry Pink
+* Soft Red
+* Pale Pink
+* Cream
+* Cherry Red / Pink สำหรับ accent
+
+### 🍫 Cocoa
+
+* Chocolate Brown
+* Cocoa
+* Caramel
+* Beige
+* Cream
+
+### 🌙 Midnight
+
+* Deep Navy
+* Muted Blue
+* Lavender
+* Soft Purple
+* Cream / Off-white สำหรับข้อความ
+
+แต่ละ Theme ควรเปลี่ยน:
+
+* Background
+* Card
+* Primary color
+* Secondary color
+* Text
+* Button
+* Border
+* Accent
+* Decorative elements
+* Illustration
+
+ให้เห็นความแตกต่างอย่างชัดเจน
+
+เพิ่ม **Surprise Me** สำหรับสุ่ม Theme
+
+เมื่อเปลี่ยน Theme:
+
+* มี transition แบบ fade นุ่ม ๆ
+* จำ Theme ที่เลือกไว้ด้วย localStorage
+* ไม่ควรเปลี่ยนสีแบบกระตุก
+
+---
+
+## 3. เพิ่มลวดลายและ Decorative Elements
+
+อยากให้เว็บไซต์มีความรู้สึกเหมือน Digital Scrapbook / Pinterest Diary มากขึ้น
+
+สามารถใช้:
+
+* Polka dots
+* Tiny hearts
+* Stars
+* Sparkles
+* ดอกไม้เล็ก ๆ
+* Bows
+* Clouds
+* Ribbons
+* Doodles
+* Checker pattern
+* Wavy lines
+* Washi tape
+* กระดาษโน้ต
+* Sticker เล็ก ๆ
+* Paper texture
+
+ใช้แบบพอดี ๆ ให้ดูน่ารักและมีรายละเอียด โดยไม่ทำให้หน้าเว็บรก
+
+อาจใช้ลาย Polka Dot เป็นพื้นหลังบางส่วน หรือเป็น decoration บริเวณ card / quote / section
+
+---
+
+## 4. เปลี่ยน Mood Icons
+
+Mood icon ปัจจุบันดูเหมือน Emoji ทั่วไป อยากเปลี่ยนเป็น **cute hand-drawn / sticker / doodle style**
+
+Mood:
+
+* Happy
+* Calm
+* Loved
+* Peaceful
+* Tired
+* Emotional
+* Sad
+* Frustrated
+
+ตัวอย่างแนวคิด:
+
+* Happy → ดวงอาทิตย์ / ดอกไม้ยิ้ม
+* Calm → เมฆกับพระจันทร์
+* Loved → หัวใจ / ดอกไม้
+* Peaceful → ดาวหรือเมฆนุ่ม ๆ
+* Tired → แมวง่วง / พระจันทร์
+* Emotional → เมฆที่มีหยดน้ำ
+* Sad → เมฆฝน
+* Frustrated → doodle หน้านิ่วหรือดาวแตกเล็ก ๆ
+
+ทุก icon ควรเป็นชุดเดียวกัน มีเส้นและสไตล์ที่เข้ากัน
+
+เมื่อเลือก Mood:
+
+* มี animation เล็ก ๆ เช่น bounce / wiggle / sparkle
+* มี visual feedback ชัดเจน
+* ไม่ใช้ emoji มาตรฐานเป็นหลัก
+
+---
+
+## 5. ปรับ Font
+
+อยากให้เว็บไซต์มีความรู้สึกเหมือนเขียนในสมุด Diary มากขึ้น
+
+เพิ่ม Cursive / Handwritten Font เช่น:
+
+* Caveat
+* Dancing Script
+* Pacifico
+* หรือ font handwritten ที่เข้ากับดีไซน์
+
+ใช้กับ:
+
+* Healing Quotes
+* Tagline
+* Subtitle
+* Handwritten notes
+* Captions
+* Decorative text
+* “A little reminder for today”
+* “A little place to come back to yourself”
+* “just for you ♡”
+
+ส่วน:
+
+* Navigation
+* Buttons
+* Forms
+* Date
+* Body text
+* ข้อมูลสำคัญ
+
+ควรใช้ font ที่อ่านง่าย เช่น Poppins / Inter
+
+อย่าใช้ Cursive กับข้อความจำนวนมากจนอ่านยาก
+
+---
+
+## 6. ปรับ Healing Quotes ใหม่
+
+เพิ่ม Healing Quotes ให้มีจำนวนมากขึ้น ประมาณ **30–50 ประโยค**
+
+แบ่งเป็นหมวด:
+
+* Gentle Reminder
+* Rest
+* Growth
+* Self-understanding
+* Self-kindness
+* Difficult Days
+* Hope
+* Comparing Yourself
+* Dreams
+* Little Joys
+
+ต้องมีทั้งภาษาอังกฤษและคำแปลภาษาไทย
+
+แนวทาง:
+
+* อบอุ่น
+* จริงใจ
+* อ่านแล้วรู้สึกได้รับการปลอบ
+* มีความหมาย
+* ไม่โลกสวยเกินไป
+* ไม่ toxic positivity
+* ไม่ทำให้รู้สึกว่าต้องเข้มแข็งตลอดเวลา
+* บางประโยคควรให้ความรู้สึกเหมือนเพื่อนพูดกับเราเบา ๆ
+
+ตัวอย่างแนวทาง:
+
+“You don’t have to have it all figured out today.”
+
+“You are allowed to have quiet days.”
+
+“Some days, simply being here is enough.”
+
+“You don’t need to catch up with anyone.”
+
+“Your journey is allowed to look different.”
+
+“Your pace is still a pace.”
+
+“Keep going, even if today’s step is tiny.”
+
+“Dreams can grow slowly, too.”
+
+“You don’t have to turn every feeling into a lesson.”
+
+“Maybe today’s little joy is enough.”
+
+“Notice the little things. They become the big memories.”
+
+“Save a little softness for yourself.”
+
+“You deserve moments that feel like home.”
+
+สามารถสร้างประโยคใหม่เพิ่มเติมในแนวเดียวกันได้ โดยไม่ใช้คำคมซ้ำ ๆ หรือดูเหมือนประโยคสำเร็จรูป
+
+---
+
+## 7. ปรับ Healing Quote Card
+
+Quote Card ควรเป็นหนึ่งในจุดเด่นของหน้า Home
+
+เพิ่มความรู้สึกเหมือนกระดาษจากสมุด Diary เช่น:
+
+* Paper texture
+* Washi tape
+* Handwritten note
+* Tiny flowers
+* Polka dots
+* Stars
+* Doodles
+* Decorative corners
+
+มี:
+
+* English quote
+* Thai translation
+* Category
+* ปุ่ม “Another reminder”
+* เปลี่ยน Quote แบบ fade animation หรือ paper-like transition
+
+Animation ควรนุ่มและไม่เยอะเกินไป
+
+---
+
+## 8. ปรับ Home Page ให้มี Visual Hierarchy
+
+อยากให้หน้า Home ดูเหมือนพื้นที่ส่วนตัวมากกว่า Dashboard ที่มี Card ขนาดเท่า ๆ กันหมด
+
+ลำดับความสำคัญ:
+
+1. **Safe Space ♡**
+2. Tagline
+3. Healing Quote
+4. Today’s Mood
+5. Why Safe Space?
+6. Quick Journal
+7. Today’s Little Things
+8. Song of the Day
+9. Memory of the Day
+
+ให้ **Healing Quote และ Today’s Mood** เป็นจุดเด่นของหน้า
+
+Card แต่ละส่วนสามารถมีขนาดและรูปแบบแตกต่างกัน เพื่อให้หน้าเว็บมีความเป็น Editorial / Scrapbook มากขึ้น
+
+---
+
+## 9. เพิ่ม Cute Micro-interactions
+
+เพิ่ม animation เล็ก ๆ ที่ช่วยให้เว็บไซต์รู้สึกมีชีวิต เช่น:
+
+* Theme change → fade
+* Mood icon → bounce / wiggle
+* Quote → fade
+* Button → soft hover
+* Card → ยกขึ้นเล็กน้อยเมื่อ hover
+* Journal button → sparkle เล็ก ๆ
+* Floating stars
+* Tiny hearts
+* Clouds
+* Subtle floating decorations
+
+Animation ทุกอย่างควรช้าและนุ่ม ไม่ควรเยอะจนรบกวนการใช้งาน
+
+---
+
+## 10. ปรับ Scrapbook Feeling
+
+อยากให้บางส่วนของเว็บไซต์ให้ความรู้สึกเหมือนกำลังเปิดสมุดส่วนตัว
+
+สามารถเพิ่ม:
+
+* กระดาษโน้ต
+* เทปแปะกระดาษ
+* Sticker
+* Handwritten note
+* Doodle
+* Polka dot paper
+* Paper edge
+* Small flower
+* Heart
+* Sparkle
+
+แต่ต้องจัดวางให้มีพื้นที่ว่างและดูสะอาด
+
+---
+
+## 11. สิ่งที่ต้องคงไว้
+
+อย่าเปลี่ยนแนวคิดหลักของเว็บไซต์
+
+ต้องคง:
+
+* ชื่อ Safe Space ♡
+* ชื่อภาษาไทย พื้นที่สบายใจ
+* Tagline: “A little place to come back to yourself.”
+* แนวคิด Digital Journal / Personal Well-being Space
+* Theme switching
+* Healing Quotes
+* Mood Selection
+* Quick Journal
+* Responsive Design
+* HTML / CSS / JavaScript
+* Privacy
+* Accessibility
+
+ยังไม่ต้องสร้างฟังก์ชันของ Phase 2–4
+
+---
+
+
+
+
+
+## 12. ขอบเขตของการแก้ไข
+
+การแก้ครั้งนี้เป็นการปรับ **Phase 1**
+
+เน้น:
+
+* สี
+* Theme
+* Typography
+* Mood Icons
+* Healing Quotes
+* Decorations
+* Scrapbook aesthetic
+* Micro-interactions
+* Visual hierarchy
+
+ไม่ต้องเพิ่มระบบใหญ่ใหม่ที่อยู่ใน Phase 2–4
+
+ก่อนแก้โค้ด ให้สรุปสิ่งที่จะปรับประมาณ 7–10 ข้อก่อน แล้วจึงแก้โค้ด
+
+หลังแก้เสร็จ ช่วยอธิบายสั้น ๆ ว่า:
+
+* เปลี่ยนอะไร
+* ทำไมถึงเลือกดีไซน์แบบนี้
+* ส่วนไหนสามารถปรับเพิ่มได้ภายหลัง
+
+อย่าเพิ่ม feature ที่ไม่ได้ขอ และถ้ามีส่วนไหนที่ไม่แน่ใจเกี่ยวกับความต้องการ ให้ถามก่อนแทนการเติมรายละเอียดเอง
+ฉันต้องการสร้างเว็บไซต์ชื่อ **“Safe Space”** หรือ **“พื้นที่สบายใจ”**
+
+เว็บไซต์นี้เป็น Digital Journal / Personal Well-being Space สำหรับวัยรุ่นและนักเรียน จุดประสงค์ไม่ใช่แค่การเขียนไดอารี่ แต่เป็นพื้นที่ส่วนตัวที่ช่วยให้ผู้ใช้หยุดพักจากความวุ่นวาย กลับมาอยู่กับตัวเอง สังเกตความรู้สึก ทบทวนแต่ละวัน และเก็บความทรงจำเล็ก ๆ ของตัวเอง
+
+Concept หลัก:
+
+**“A little place to come back to yourself.”**
+
+ความรู้สึกที่อยากให้ผู้ใช้ได้รับเมื่อเปิดเว็บไซต์:
+
+* สบายใจ
+* อบอุ่น
+* ปลอดภัย
+* ไม่ถูกตัดสิน
+* ไม่เร่งรีบ
+* เหมือนมีมุมเล็ก ๆ ของตัวเอง
+* เหมือนเปิดสมุดบันทึกที่สวยและเป็นส่วนตัว
+* ไม่อยากให้เว็บไซต์ดูเหมือนเว็บทางการหรือแอปสุขภาพจิตที่จริงจังเกินไป
+
+กลุ่มผู้ใช้:
+
+* นักเรียน
+* วัยรุ่น
+* คนที่ชอบเขียน Journal
+* คนที่อยากบันทึกความรู้สึกและความทรงจำ
+
+---
+
+# 1. BRANDING
+
+ชื่อเว็บไซต์:
+
+**Safe Space ♡**
+
+ชื่อภาษาไทย:
+
+**พื้นที่สบายใจ**
+
+Tagline:
+
+**A little place to come back to yourself.**
+
+ให้ชื่อและ tagline มีความโดดเด่น แต่ไม่หวานหรือเด็กเกินไป
+
+Mood & Tone:
+
+* soft
+* cozy
+* calm
+* dreamy
+* personal
+* gentle
+* Pinterest-inspired
+* modern digital diary
+
+ไม่ต้องใช้สีชมพูทั้งหมด และไม่ต้องตกแต่งจนรก
+
+---
+
+# 2. COLOR THEME SYSTEM
+
+เว็บไซต์ต้องสามารถเปลี่ยน Theme ได้
+
+ต้องมี Theme ให้เลือกอย่างน้อย:
+
+### 🌷 Blush
+
+Dusty pink + cream + soft brown
+
+### 🫧 Sky
+
+Powder blue + white + soft gray
+
+### 🌿 Sage
+
+Sage green + cream + warm beige
+
+### ☕ Cocoa
+
+Warm brown + beige + cream
+
+### 🌙 Night
+
+Deep navy + lavender + muted blue
+
+### 🌸 Sakura
+
+Muted pink + ivory + soft gray
+
+แต่ละ Theme ต้องเปลี่ยน:
+
+* Background
+* Card
+* Primary color
+* Secondary color
+* Text color
+* Button
+* Border
+* Accent
+* Illustration/decoration
+
+เพิ่มปุ่ม:
+
+**✨ Surprise Me**
+
+เพื่อสุ่ม Theme
+
+เพิ่มระบบจำ Theme ที่ผู้ใช้เลือกไว้ เพื่อเมื่อกลับมาเปิดเว็บไซต์อีกครั้งยังใช้ Theme เดิม
+
+ถ้าเป็นไปได้ ให้มี animation เบา ๆ ตอนเปลี่ยน Theme เช่น fade transition
+
+---
+
+# 3. GLOBAL DESIGN
+
+รูปแบบเว็บไซต์:
+
+Desktop:
+
+* Sidebar หรือ navigation ที่ชัดเจน
+* มีพื้นที่ content กว้าง
+* card มีมุมโค้ง
+* spacing เยอะ
+* ไม่อัดข้อมูลแน่น
+
+Mobile:
+
+* Responsive 100%
+* เปลี่ยน navigation เป็น bottom navigation
+* card ปรับขนาดตามหน้าจอ
+* ปุ่มต้องกดง่าย
+
+Font:
+
+* Heading: serif หรือ elegant font เช่น Playfair Display
+* Body: clean font เช่น Poppins / Inter
+* Handwritten accent: ฟอนต์ลายมือ เช่น Caveat แต่ใช้เฉพาะบางส่วน
+
+องค์ประกอบ:
+
+* rounded corners
+* soft shadow
+* subtle border
+* gentle hover effect
+* smooth transition
+* ไม่ใช้ animation มากเกินไป
+
+---
+
+# 4. NAVIGATION
+
+เมนูหลัก:
+
+🏠 Home
+📖 Journal
+📅 Calendar
+🌷 Mood
+📸 Memories
+
+เมนูเพิ่มเติม:
+
+💌 Letters
+🌱 Garden
+📊 My Year
+⚙️ Settings
+
+ด้านบนอาจมี:
+
+* วันที่
+* Theme button
+* Search
+* Profile / “Me”
+
+---
+
+# 5. HOME PAGE
+
+หน้า Home ต้องให้ความรู้สึกเหมือนผู้ใช้กำลังเข้ามาในพื้นที่ส่วนตัว
+
+## 5.1 Welcome
+
+แสดง:
+
+**Safe Space ♡**
+
+**A little place to come back to yourself.**
+
+แสดงวันที่ปัจจุบัน เช่น:
+
+Saturday, September 26, 2026
+
+ถ้าเป็นไปได้ให้แสดงเวลาปัจจุบันแบบเล็ก ๆ
+
+---
+
+## 5.2 Healing Quote
+
+สร้าง card:
+
+**A little reminder for today ♡**
+
+แสดงคำพูดฮีลใจแบบสุ่ม
+
+ตัวอย่าง:
+
+“You don't have to have everything figured out today.”
+
+พร้อมคำแปลภาษาไทย
+
+“ไม่เป็นไรนะ ถ้าวันนี้เรายังหาคำตอบให้กับทุกอย่างไม่ได้”
+
+ปุ่ม:
+
+**♡ Another reminder**
+
+เมื่อกด:
+
+* เปลี่ยน quote
+* มี fade animation
+* ไม่เปลี่ยนทั้งหน้า
+
+ให้มี quote หลายสิบประโยคเพื่อไม่ให้ซ้ำง่าย
+
+คำพูดต้องเป็นแนว:
+
+* ให้กำลังใจ
+* การพัก
+* การยอมรับตัวเอง
+* การเติบโต
+* ความผิดพลาด
+* ความไม่สมบูรณ์แบบ
+* การให้เวลากับตัวเอง
+
+หลีกเลี่ยงคำพูดที่ดู toxic positivity หรือรับรองว่าทุกอย่างจะดีเสมอ
+
+---
+
+# 6. WHY SAFE SPACE?
+
+สร้าง section:
+
+**Why this space exists ♡**
+
+ข้อความสั้น ๆ:
+
+“บางครั้งเราใช้เวลาทั้งวันรับมือกับหลายสิ่ง จนลืมหันกลับมาถามตัวเองว่า จริง ๆ แล้ววันนี้เรารู้สึกอย่างไร?”
+
+สร้าง 4 cards:
+
+### 🪞 Understand Yourself
+
+เข้าใจตัวเองมากขึ้น
+
+ใช้การเขียนและทบทวนสิ่งที่เกิดขึ้นในแต่ละวัน
+
+### 🌷 Understand Your Feelings
+
+รู้เท่าทันอารมณ์ของตัวเอง
+
+สังเกตว่าแต่ละวันเรารู้สึกอย่างไร และอะไรอาจเกี่ยวข้องกับความรู้สึกนั้น
+
+### 📖 Keep Your Memories
+
+เก็บเรื่องราวและความทรงจำ
+
+บันทึกข้อความ รูปภาพ เพลง และช่วงเวลาเล็ก ๆ
+
+### 🌱 Grow at Your Own Pace
+
+เติบโตในแบบของตัวเอง
+
+มองย้อนกลับไปเพื่อเห็นการเปลี่ยนแปลงของตัวเอง โดยไม่ต้องเปรียบเทียบกับคนอื่น
+
+---
+
+# 7. TODAY'S MOOD
+
+สร้าง section:
+
+**How are you feeling today?**
+
+Mood options:
+
+😊 Happy
+😌 Calm
+🥰 Loved
+🤍 Peaceful
+😴 Tired
+🥹 Emotional
+😔 Sad
+😤 Frustrated
+
+เมื่อเลือก:
+
+* card ที่เลือกมี highlight
+* มี animation เบา ๆ
+* บันทึก mood พร้อมวันที่
+* ผู้ใช้เปลี่ยน mood ภายหลังได้
+
+เพิ่มคำถาม optional:
+
+**Want to tell yourself why?**
+
+ให้เขียนสั้น ๆ ได้
+
+เช่น:
+
+“วันนี้เหนื่อยเพราะเรียนเยอะ แต่ก็รู้สึกดีที่ทำงานเสร็จ”
+
+---
+
+# 8. QUICK JOURNAL
+
+สร้าง card:
+
+**A little space for your thoughts...**
+
+placeholder:
+
+“What’s on your mind today?”
+
+ปุ่ม:
+
+**Write in my journal →**
+
+กดแล้วไปหน้า New Journal Entry
+
+---
+
+# 9. TODAY'S LITTLE THINGS
+
+สร้างส่วนเล็ก ๆ สำหรับบันทึก:
+
+✨ One thing I'm grateful for
+🌷 One thing that made me smile
+📚 One thing I learned
+💭 One thing I'm thinking about
+
+ให้กรอกสั้น ๆ ได้
+
+---
+
+# 10. SONG OF THE DAY
+
+สร้าง card:
+
+🎧 **Today's soundtrack**
+
+มี:
+
+* Album cover
+* Song title
+* Artist
+* Play button
+* Progress bar
+
+ใน Version แรกสามารถใช้เพลงตัวอย่างหรือเพลงที่ผู้ใช้กรอกเองได้
+
+ผู้ใช้สามารถเพิ่ม:
+
+* เพลง
+* ศิลปิน
+* ความรู้สึกที่มีต่อเพลง
+
+---
+
+# 11. MEMORY OF THE DAY
+
+สร้าง:
+
+📸 **Today's little moment**
+
+ให้ upload รูป
+
+หลัง upload:
+
+* preview รูป
+* crop / remove
+* caption
+* วันที่
+
+ตัวอย่าง:
+
+“A tiny moment worth remembering.”
+
+---
+
+# 12. JOURNAL PAGE
+
+หน้า Journal แสดงรายการ Journal ทั้งหมด
+
+ด้านบน:
+
+**My Journal ♡**
+
+มี:
+
+* Search
+* Filter by mood
+* Filter by date
+* Filter by tag
+
+Journal card แสดง:
+
+Date
+Mood
+Title
+Short preview
+Photo count
+Song
+Tags
+
+ตัวอย่าง:
+
+September 26, 2026
+😊 Happy
+
+**A surprisingly good day**
+
+“Today started normally, but somehow…”
+
+#school #friends #littlethings
+
+ปุ่ม:
+
+**Read more**
+
+---
+
+# 13. NEW JOURNAL PAGE
+
+ให้ผู้ใช้สร้าง Journal ใหม่
+
+Fields:
+
+Date
+Mood
+Title
+Journal content
+Photos
+Song
+Tags
+Location (optional)
+
+Text editor:
+
+* Bold
+* Italic
+* Underline
+* Bullet list
+* Emoji
+* Highlight
+
+ปุ่ม:
+
+**Save Memory ♡**
+
+เมื่อ save:
+แสดง animation เล็ก ๆ:
+
+✨ Saved to your memories.
+
+ระบบ Auto-save draft หากทำได้
+
+---
+
+# 14. CALENDAR PAGE
+
+สร้างปฏิทินรายเดือน
+
+แต่ละวันที่มีข้อมูลให้แสดง indicator เช่น:
+
+🌷 Mood
+📖 Journal
+📸 Photo
+🎵 Song
+
+เมื่อกดวันที่:
+เปิดข้อมูลของวันนั้น
+
+เช่น:
+
+September 26
+
+😊 Happy
+
+📖 1 Journal
+📸 3 Photos
+🎵 1 Song
+
+สามารถกดเข้าไปดูรายละเอียดได้
+
+เพิ่ม:
+
+* Previous month
+* Next month
+* Today button
+
+---
+
+# 15. MOOD TRACKER
+
+หน้า Mood:
+
+**How have I been feeling?**
+
+แสดง:
+
+* Mood calendar
+* Mood history
+* Weekly overview
+* Monthly overview
+
+สร้างกราฟแสดง mood ตามวัน
+
+เช่น:
+
+September 1 😊
+September 2 😌
+September 3 😴
+...
+
+แสดงสรุป:
+
+Most recorded mood
+Most peaceful day
+Most active journaling day
+
+ห้ามใช้ข้อมูลเพื่อวินิจฉัยสุขภาพจิต
+เป็นเพียง personal reflection / self-tracking
+
+---
+
+# 16. MOOD INSIGHTS
+
+ให้ระบบแสดง insight แบบอ่อนโยนและไม่ตัดสิน เช่น:
+
+“You recorded Calm most often this month.”
+
+หรือ
+
+“You wrote more journal entries on days you felt Happy.”
+
+อย่าให้ระบบสรุปหรือวินิจฉัยว่าเหตุใดผู้ใช้ถึงรู้สึกแบบนั้น หากไม่มีข้อมูลเพียงพอ
+
+---
+
+# 17. MEMORIES PAGE
+
+สร้าง Gallery แบบ Pinterest / Masonry
+
+แสดงรูปทั้งหมด
+
+แต่ละรูปมี:
+
+* Date
+* Caption
+* Mood
+
+กดรูป:
+เปิด fullscreen modal
+
+สามารถ:
+
+* Next
+* Previous
+* Delete
+* Edit caption
+
+---
+
+# 18. MEMORY TIMELINE
+
+สร้าง Timeline:
+
+2026
+↓
+September
+↓
+August
+↓
+July
+
+แสดง Journal และ Memories ตามเวลา
+
+ให้ scroll ลงได้
+
+ใช้ animation เบา ๆ ตอน scroll
+
+---
+
+# 19. SEARCH
+
+Search bar:
+
+**Search your memories...**
+
+ค้นหา:
+
+* Journal title
+* Journal content
+* Tags
+* Mood
+* Song
+* Caption
+
+แสดงผลแบบ card
+
+---
+
+# 20. TAG SYSTEM
+
+ผู้ใช้สามารถสร้าง tag เช่น:
+
+#school
+#friends
+#study
+#family
+#travel
+#happy
+#littlethings
+
+เมื่อกด tag:
+แสดง memories ทั้งหมดที่เกี่ยวข้อง
+
+---
+
+# 21. LETTERS TO FUTURE ME
+
+สร้างหน้า:
+
+**Dear Future Me 💌**
+
+ผู้ใช้เขียนจดหมายถึงตัวเอง
+
+เลือก:
+
+Open after:
+
+* 1 month
+* 3 months
+* 6 months
+* 1 year
+* Custom date
+
+ก่อนถึงวันที่กำหนด:
+แสดง
+
+🔒 This letter is waiting for you.
+
+เมื่อถึงวันที่:
+เปิดซองจดหมายด้วย animation
+
+---
+
+# 22. GRATITUDE GARDEN
+
+สร้างหน้า:
+
+**My Little Garden 🌱**
+
+ทุกครั้งที่ผู้ใช้บันทึก gratitude:
+
+“วันนี้ฉันขอบคุณ...”
+
+จะได้รับต้นไม้หรือดอกไม้ 1 ต้น
+
+ต้นไม้ค่อย ๆ เติบโตตามจำนวน entries
+
+เช่น:
+
+1 entry → 🌱
+5 entries → 🌿
+10 entries → 🌷
+20 entries → 🌳
+
+กดต้นไม้แต่ละต้น:
+เปิด gratitude entry ที่เกี่ยวข้อง
+
+---
+
+# 23. MY YEAR
+
+สร้างหน้า:
+
+**My Year in Memories**
+
+แสดงสถิติส่วนตัว เช่น:
+
+Journal entries
+Photos
+Songs
+Mood records
+Gratitude entries
+
+แสดง:
+
+* Mood distribution
+* Favorite tags
+* Most journaled month
+* Number of memories
+
+สร้าง aesthetic annual recap
+
+มีปุ่ม:
+
+**Create My Year Card**
+
+เพื่อสร้างภาพสรุปปีที่บันทึกได้
+
+---
+
+# 24. SETTINGS
+
+มี:
+
+### Appearance
+
+Theme
+Light / Dark mode
+
+### Journal
+
+Auto-save
+Default mood
+Date format
+
+### Privacy
+
+Lock journal (ถ้าทำได้)
+Hide previews
+Clear local data
+
+### Data
+
+Export journal
+Import journal
+Delete all data
+
+ก่อนลบข้อมูลต้องมี confirmation
+
+---
+
+# 25. SMALL DETAILS / MICRO INTERACTIONS
+
+อยากให้เว็บไซต์มีรายละเอียดเล็ก ๆ เช่น:
+
+* hover effect
+* smooth transition
+* fade-in
+* floating decorative elements
+* subtle sparkle
+* heart animation
+* paper texture แบบเบามาก
+* cursor interaction แบบนุ่ม ๆ ถ้าไม่ทำให้เว็บช้า
+* empty state ที่น่ารัก
+
+ตัวอย่างเมื่อไม่มี Journal:
+
+“Your little book is still waiting for its first story. ♡”
+
+เมื่อไม่มี Memories:
+
+“Some memories are still waiting to be made.”
+
+เมื่อไม่มี Mood:
+
+“Check in with yourself whenever you're ready.”
+
+อย่าให้ข้อความกดดันผู้ใช้
+
+---
+
+# 26. PRIVACY
+
+เนื่องจากเว็บไซต์มีข้อมูลส่วนตัว ให้คำนึงถึง privacy ตั้งแต่ต้น
+
+สำหรับ Version แรกสามารถเก็บข้อมูลใน browser ด้วย localStorage หรือ IndexedDB
+
+ไม่ต้องสร้างระบบ account/login ถ้ายังไม่จำเป็น
+
+ผู้ใช้ควรสามารถ:
+
+* Export data
+* Delete data
+* Clear all data
+
+และต้องมี confirmation ก่อนลบ
+
+---
+
+# 27. RESPONSIVE DESIGN
+
+เว็บไซต์ต้องทำงานบน:
+
+Desktop
+Tablet
+Mobile
+
+Desktop:
+Sidebar
+
+Mobile:
+Bottom navigation
+
+รูปภาพต้องไม่ล้นหน้าจอ
+
+Text ต้องอ่านง่าย
+
+ปุ่มต้องมีขนาดเหมาะสมสำหรับการกดบนมือถือ
+
+---
+
+# 28. ACCESSIBILITY
+
+ให้คำนึงถึง:
+
+* contrast
+* readable font
+* keyboard navigation
+* alt text สำหรับรูป
+* button labels
+* ไม่ใช้สีเพียงอย่างเดียวในการสื่อข้อมูล
+
+---
+
+# 29. TECHNICAL DIRECTION
+
+ฉันเป็นมือใหม่ด้าน Programming
+
+สำหรับ Version แรกต้องการใช้:
+
+HTML
+CSS
+JavaScript
+
+ก่อน
+
+ยังไม่ต้องใช้ React, Next.js หรือ framework ที่ซับซ้อน เว้นแต่มีเหตุผลที่จำเป็นจริง ๆ
+
+โค้ดควรแบ่งเป็นไฟล์อย่างเป็นระเบียบ เช่น:
+
+index.html
+journal.html
+calendar.html
+mood.html
+memories.html
+style.css
+script.js
+
+หรือเสนอโครงสร้างที่ดีกว่านี้หากเหมาะสม
+
+ต้องอธิบายว่าทำไมเลือกโครงสร้างนั้น
+
+---
+
+# 30. IMPORTANT — HOW I WANT YOU TO WORK
+
+ฉันต้องการใช้ AI เป็นผู้ช่วยสร้างเว็บไซต์ แต่ฉันเป็นมือใหม่และต้องการเรียนรู้จากโปรเจกนี้
+
+ดังนั้น:
+
+1. อย่าเขียนทุกอย่างรวมกันเป็นไฟล์เดียวถ้าไม่จำเป็น
+2. เขียนโค้ดให้อ่านง่าย
+3. ใส่ comment ในส่วนสำคัญ
+4. อธิบายว่าแต่ละส่วนทำอะไร
+5. อย่าใช้ library ที่ไม่จำเป็น
+6. ถ้าต้องติดตั้งอะไร ให้บอกก่อน
+7. ถ้ามีหลายวิธี ให้บอกข้อดีข้อเสียสั้น ๆ
+8. อย่าเพิ่มฟังก์ชันที่ฉันไม่ได้ขอโดยไม่บอก
+9. คำนึงถึง responsive design ตั้งแต่แรก
+10. คำนึงถึง accessibility และ privacy
+11. ทำให้เว็บไซต์สามารถต่อยอดได้ในอนาคต
+
+---
+
+# 31. DEVELOPMENT PHASES
+
+แบ่งการสร้างเป็น:
+
+### PHASE 1 — Core Website
+
+Home
+Navigation
+Theme system
+Healing quotes
+Mood selection
+Quick journal
+Responsive layout
+
+### PHASE 2 — Journal System
+
+Journal entries
+Calendar
+Search
+Tags
+Photos
+Songs
+Mood tracker
+
+### PHASE 3 — Personal Features
+
+Future Letters
+Gratitude Garden
+Memory Timeline
+My Year
+Export data
+Dark mode
+Advanced animations
+
+### PHASE 4 — Future AI Features
+
+AI reflection prompts
+AI journal prompts
+AI-assisted organization
+AI-generated yearly reflection
+
+แต่ตอนนี้ยังไม่ต้องสร้าง Phase 2–4
+
+---
+
+# 32. FIRST TASK
+
+ก่อนเขียนโค้ดใด ๆ:
+
+1. วิเคราะห์ concept ของเว็บไซต์
+2. เสนอ sitemap
+3. เสนอ folder/file structure
+4. อธิบาย data structure ที่ควรใช้
+5. อธิบายว่าฟังก์ชันใดควรใช้ localStorage / IndexedDB
+6. ออกแบบ UI hierarchy ของแต่ละหน้า
+7. เสนอ design system
+8. เสนอ color variables สำหรับ Theme system
+9. แบ่ง development เป็นขั้นตอนย่อย
+10. บอก dependencies ที่จำเป็น
+11. บอกสิ่งที่ควรทำก่อนและหลัง
+
+**หากไม่เข้าใจตรงไหนหรือข้อมูลไม่ครบถ้วนถามฉันได้เลยไม่เติมแต่งเอง และมีคำแนะนำตรงไหนไหม**

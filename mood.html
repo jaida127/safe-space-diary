@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tracker ♡ | Safe Space</title>
+
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/mood.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles ประดับพื้นหลัง -->
+  <div class="floating-sparkle" style="top: 12%; left: 22%; font-size: 1.5rem;">✦</div>
+  <div class="floating-sparkle" style="top: 45%; right: 6%; font-size: 1.2rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 80%; left: 16%; font-size: 1.4rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR (เมนูหลัก)
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">“A little place to come back to yourself.”</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="journal.html" class="nav-link">
+            <span class="nav-icon">📖</span>
+            <span>Journal</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html" class="nav-link">
+            <span class="nav-icon">📅</span>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="mood.html" class="nav-link active">
+            <span class="nav-icon">🌷</span>
+            <span>Mood</span>
+          </a>
+        </li>
+        <li>
+          <a href="memories.html" class="nav-link">
+            <span class="nav-icon">📸</span>
+            <span>Memories</span>
+          </a>
+        </li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li>
+          <a href="letters.html" class="nav-link">
+            <span class="nav-icon">💌</span>
+            <span>Letters</span>
+          </a>
+        </li>
+        <li>
+          <a href="garden.html" class="nav-link">
+            <span class="nav-icon">🌱</span>
+            <span>Garden</span>
+          </a>
+        </li>
+        <li>
+          <a href="myyear.html" class="nav-link">
+            <span class="nav-icon">📊</span>
+            <span>My Year</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 7 ธีมสีสไตล์ Scrapbook -->
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container">
+          <!-- เรนเดอร์อัตโนมัติจาก js/themes.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT (เนื้อหา Mood Tracker)
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- แถบบน: วันที่ เวลา และ Surprise Me -->
+      <header class="top-header">
+        <div class="date-display">
+          <span class="date-text">🌷 Mood Tracker</span>
+          <span class="time-text">“Observing your feelings gently, without judgment.”</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-sm btn-outline" onclick="ThemeManager.surpriseMe()">
+            ✨ Surprise Me!
+          </button>
+        </div>
+      </header>
+
+      <div class="mood-page-container">
+
+        <!-- สรุปสถิติ 3 การ์ด -->
+        <section class="mood-stats-grid">
+          <div class="mood-stat-card">
+            <div class="washi-tape"></div>
+            <img src="assets/stickers/flower.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="flower">
+            <div class="stat-icon">🗓️</div>
+            <div class="stat-value" id="stat-total-days">0</div>
+            <div class="stat-label">บันทึกอารมณ์ทั้งหมด (Days)</div>
+          </div>
+
+          <div class="mood-stat-card">
+            <div class="washi-tape"></div>
+            <img src="assets/stickers/heart.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="heart">
+            <div class="stat-icon">✨</div>
+            <div class="stat-value" id="stat-top-mood">—</div>
+            <div class="stat-label">ความรู้สึกที่พบบ่อยที่สุด</div>
+          </div>
+
+          <div class="mood-stat-card">
+            <div class="washi-tape"></div>
+            <img src="assets/stickers/cat.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="cat">
+            <div class="stat-icon">🌱</div>
+            <div class="stat-value" id="stat-streak" style="font-size: 1.3rem;">เริ่มก้าวแรกกัน ♡</div>
+            <div class="stat-label">การดูแลและรับฟังใจตัวเอง</div>
+          </div>
+        </section>
+
+        <!-- บันทึกอารมณ์ด่วนวันนี้ (Quick Check-in) -->
+        <section class="mood-quick-checkin-card">
+          <div class="washi-tape"></div>
+          <img src="assets/stickers/bow.png" class="scrapbook-sticker sticker-md sticker-corner-tl" alt="bow">
+          <h3 class="card-title">🌸 วันนี้ใจของคุณเป็นอย่างไรบ้างคะ?</h3>
+          <p class="card-subtitle">เลือกอารมณ์ที่ตรงกับความรู้สึกในตอนนี้ที่สุด</p>
+
+          <div class="mood-selector-row">
+            <button type="button" class="mood-btn-choice" data-mood="happy">
+              <span class="mood-emoji">😊</span>
+              <span class="mood-name">Happy</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="calm">
+              <span class="mood-emoji">😌</span>
+              <span class="mood-name">Calm</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="loved">
+              <span class="mood-emoji">🥰</span>
+              <span class="mood-name">Loved</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="peaceful">
+              <span class="mood-emoji">🤍</span>
+              <span class="mood-name">Peaceful</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="tired">
+              <span class="mood-emoji">😴</span>
+              <span class="mood-name">Tired</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="emotional">
+              <span class="mood-emoji">🥹</span>
+              <span class="mood-name">Emotional</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="sad">
+              <span class="mood-emoji">😔</span>
+              <span class="mood-name">Sad</span>
+            </button>
+            <button type="button" class="mood-btn-choice" data-mood="frustrated">
+              <span class="mood-emoji">😤</span>
+              <span class="mood-name">Frustrated</span>
+            </button>
+          </div>
+
+          <input type="text" id="mood-quick-note" class="mood-note-input" placeholder="โน้ตสั้นๆ ให้ใจตัวเอง (ถ้าอยากเขียนไว้)...">
+          
+          <div style="text-align: right;">
+            <button class="btn btn-primary" id="btn-save-quick-mood">
+              ✨ บันทึกอารมณ์วันนี้
+            </button>
+          </div>
+        </section>
+
+        <!-- ภาพรวมรายเดือน (Mood Pattern Matrix) -->
+        <section class="mood-matrix-card">
+          <div class="washi-tape"></div>
+          <img src="assets/stickers/moon.png" class="scrapbook-sticker sticker-md sticker-corner-tr" alt="moon">
+          <h3 class="card-title">📅 Mood Overview เดือนนี้</h3>
+          <p class="card-subtitle">ทุกสีสันคือช่วงเวลาที่ผ่านไปอย่างมีความหมาย</p>
+          <div class="mood-matrix-grid" id="mood-matrix-grid"></div>
+        </section>
+
+        <!-- สัดส่วนอารมณ์ และ ข้อความอ่อนโยน (2 Columns) -->
+        <section class="mood-details-row">
+          
+          <!-- กราฟสัดส่วนอารมณ์ -->
+          <div class="mood-breakdown-card">
+            <h3 class="card-title">📊 สัดส่วนอารมณ์</h3>
+            <p class="card-subtitle">ความรู้สึกที่ปรากฏขึ้นในแต่ละช่วงเวลา</p>
+            <div class="breakdown-list" id="mood-breakdown-list"></div>
+          </div>
+
+          <!-- ข้อความและข้อคิดให้กำลังใจ (Gentle Insight) -->
+          <div class="mood-insight-card">
+            <img src="assets/stickers/bear.png" class="scrapbook-sticker sticker-md sticker-corner-tr" alt="bear">
+            <h3 class="card-title">💌 Gentle Reminder for You</h3>
+            <p class="card-subtitle">ข้อความอบอุ่นหัวใจสำหรับวันนี้</p>
+            <div class="gentle-insight-text" id="gentle-insight-text">
+              กำลังรวบรวมความรู้สึกของคุณ... ♡
+            </div>
+            <div class="insight-doodle">with kindness & care ♡</div>
+          </div>
+
+        </section>
+
+      </div><!-- /.mood-page-container -->
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <span class="footer-sparkle">✦ ✧ ✦</span>
+        <p class="footer-text">
+          Safe Space <span class="footer-heart">♡</span> A little place to come back to yourself
+        </p>
+        <p class="footer-subtext">
+          you don't have to feel happy every day; every feeling deserves to be held gently ♡
+        </p>
+      </footer>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAVIGATION (จอมือถือ)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item">
+        <span class="icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="journal.html" class="bottom-nav-item">
+        <span class="icon">📖</span>
+        <span>Journal</span>
+      </a>
+      <a href="calendar.html" class="bottom-nav-item">
+        <span class="icon">📅</span>
+        <span>Calendar</span>
+      </a>
+      <a href="mood.html" class="bottom-nav-item active">
+        <span class="icon">🌷</span>
+        <span>Mood</span>
+      </a>
+      <a href="memories.html" class="bottom-nav-item">
+        <span class="icon">📸</span>
+        <span>Memories</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/mood.js?v=4"></script>
+</body>
+</html>

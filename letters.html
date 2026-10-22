@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Future Me 💌 | Safe Space ♡</title>
+
+  <!-- สไตล์ชีต -->
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/letters.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="floating-sparkle" style="top: 12%; left: 18%; font-size: 1.4rem;">✦</div>
+  <div class="floating-sparkle" style="top: 50%; right: 7%; font-size: 1.1rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 82%; left: 12%; font-size: 1.3rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">"A little place to come back to yourself."</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+        <li><a href="journal.html" class="nav-link"><span class="nav-icon">📖</span><span>Journal</span></a></li>
+        <li><a href="calendar.html" class="nav-link"><span class="nav-icon">📅</span><span>Calendar</span></a></li>
+        <li><a href="mood.html" class="nav-link"><span class="nav-icon">🌷</span><span>Mood</span></a></li>
+        <li><a href="memories.html" class="nav-link"><span class="nav-icon">📸</span><span>Memories</span></a></li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li><a href="letters.html" class="nav-link active"><span class="nav-icon">💌</span><span>Letters</span></a></li>
+        <li><a href="garden.html" class="nav-link"><span class="nav-icon">🌱</span><span>Garden</span></a></li>
+        <li><a href="myyear.html" class="nav-link"><span class="nav-icon">📊</span><span>My Year</span></a></li>
+        <li><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span><span>Settings</span></a></li>
+      </ul>
+
+      <!-- 7 ธีมสี -->
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container">
+          <!-- เรนเดอร์โดย js/themes.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <div class="letters-header">
+        <div class="letters-header-left">
+          <h2>💌 Dear Future Me</h2>
+          <p>เขียนจดหมายถึงตัวเองในอนาคต... แล้ววันหนึ่งจะกลับมาอ่าน ♡</p>
+        </div>
+        <button class="btn-primary" id="btn-write-letter">✉️ เขียนจดหมาย</button>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="letters-filters">
+        <button class="letters-filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="letters-filter-btn" data-filter="unlocked">💌 เปิดอ่านได้</button>
+        <button class="letters-filter-btn" data-filter="locked">🔒 ยังล็อกอยู่</button>
+        <button class="letters-filter-btn" data-filter="favorite">♥ โปรด</button>
+      </div>
+
+      <!-- Envelope Cards Grid -->
+      <div class="letters-grid" id="letters-grid"></div>
+
+      <!-- Empty State -->
+      <div class="letters-empty" id="letters-empty" style="display: none;">
+        <div class="letters-empty-icon">💌</div>
+        <p>ยังไม่มีจดหมายจากตัวเอง... เขียนสักฉบับไหม?</p>
+        <button class="btn-primary" onclick="LettersApp.openWriteModal()">✉️ เขียนจดหมายแรก</button>
+      </div>
+
+      <!-- Footer -->
+      <div class="page-footer">
+        <span>✦ dear future me, i hope you're doing okay ✦</span>
+      </div>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAV (mobile)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a href="journal.html" class="bottom-nav-item"><span class="nav-icon">📖</span><span>Journal</span></a>
+      <a href="calendar.html" class="bottom-nav-item"><span class="nav-icon">📅</span><span>Calendar</span></a>
+      <a href="mood.html" class="bottom-nav-item"><span class="nav-icon">🌷</span><span>Mood</span></a>
+      <a href="memories.html" class="bottom-nav-item"><span class="nav-icon">📸</span><span>Memories</span></a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- ====================================================================
+       MODAL: เขียนจดหมาย (Write Letter)
+       ==================================================================== -->
+  <div class="letter-modal-overlay" id="write-letter-modal">
+    <div class="letter-modal-paper">
+      <div class="washi-tape"></div>
+      <button class="letter-close-btn" id="btn-close-write">✕</button>
+      <img src="assets/stickers/heart.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+
+      <div class="letter-modal-title">✉️ เขียนจดหมายถึงตัวเอง</div>
+
+      <div class="letter-form-group">
+        <label>✏️ หัวข้อจดหมาย</label>
+        <input type="text" id="letter-subject" placeholder="ถึงตัวเองในวันที่..." maxlength="100">
+      </div>
+
+      <div class="letter-form-group">
+        <label>📝 เนื้อหาจดหมาย</label>
+        <textarea id="letter-content" placeholder="สวัสดีตัวเองในอนาคต..."></textarea>
+      </div>
+
+      <div class="letter-form-group">
+        <label>💌 อารมณ์ตอนเขียน</label>
+        <div class="letter-mood-picker">
+          <button type="button" class="letter-mood-option" data-mood="happy" data-emoji="😊" data-label="Happy">😊 Happy</button>
+          <button type="button" class="letter-mood-option" data-mood="calm" data-emoji="😌" data-label="Calm">😌 Calm</button>
+          <button type="button" class="letter-mood-option" data-mood="hopeful" data-emoji="🌈" data-label="Hopeful">🌈 Hopeful</button>
+          <button type="button" class="letter-mood-option" data-mood="anxious" data-emoji="😰" data-label="Anxious">😰 Anxious</button>
+          <button type="button" class="letter-mood-option" data-mood="sad" data-emoji="🥺" data-label="Sad">🥺 Sad</button>
+          <button type="button" class="letter-mood-option" data-mood="tired" data-emoji="😴" data-label="Tired">😴 Tired</button>
+          <button type="button" class="letter-mood-option" data-mood="grateful" data-emoji="🙏" data-label="Grateful">🙏 Grateful</button>
+        </div>
+      </div>
+
+      <div class="letter-form-group">
+        <label>📅 วันที่เปิดอ่านได้</label>
+        <input type="date" id="letter-unlock-date">
+        <label class="letter-immediate-check">
+          <input type="checkbox" id="letter-immediate">
+          เปิดอ่านได้เลย (ไม่ต้องล็อก)
+        </label>
+      </div>
+
+      <div class="letter-form-actions">
+        <button class="letter-btn-cancel" id="btn-cancel-letter">ยกเลิก</button>
+        <button class="letter-btn-save" id="btn-save-letter">💌 ส่งจดหมาย</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL: อ่านจดหมาย (Read Letter)
+       ==================================================================== -->
+  <div class="letter-modal-overlay" id="read-letter-modal">
+    <div class="letter-modal-paper">
+      <div class="washi-tape"></div>
+      <button class="letter-close-btn" id="btn-close-read-letter">✕</button>
+      <img src="assets/stickers/flower.png" class="scrapbook-sticker sticker-sm sticker-corner-tl" alt="sticker">
+      <img src="assets/stickers/star.png" class="scrapbook-sticker sticker-sm sticker-corner-br" alt="sticker" style="bottom:12px;right:12px;position:absolute;">
+
+      <div id="read-letter-content">
+        <!-- เนื้อหาจะถูกเรนเดอร์จาก JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/letters.js?v=4"></script>
+
+</body>
+</html>

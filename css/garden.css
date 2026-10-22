@@ -1,0 +1,326 @@
+/* ==========================================================================
+   GARDEN.CSS — My Little Garden 🌱 (Safe Space ♡)
+   สวนเล็กๆ ที่โตตามกิจกรรมของผู้ใช้: streak, ต้นไม้, milestones
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. GARDEN VISUAL AREA — พื้นที่สวน
+   ------------------------------------------------------------------------- */
+.garden-scene {
+  position: relative;
+  background: linear-gradient(180deg, #e8f5fd 0%, #d4edda 40%, #b8dfb0 70%, #a8d5a2 100%);
+  border-radius: 20px;
+  min-height: 280px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ท้องฟ้า */
+.garden-sky {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, #d6eef8 0%, #e8f5fd 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.garden-sun {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 2.2rem;
+  animation: sunGlow 3s ease-in-out infinite;
+}
+
+@keyframes sunGlow {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(255,200,50,0.4)); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 16px rgba(255,200,50,0.6)); }
+}
+
+/* เมฆ */
+.garden-cloud {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  animation: cloudDrift 20s linear infinite;
+}
+
+.garden-cloud:nth-child(2) { top: 25px; left: -30px; animation-duration: 25s; }
+.garden-cloud:nth-child(3) { top: 50px; left: -80px; animation-duration: 30s; font-size: 1.2rem; }
+
+@keyframes cloudDrift {
+  from { transform: translateX(-100px); }
+  to   { transform: translateX(calc(100vw + 100px)); }
+}
+
+/* แปลงปลูก */
+.garden-ground {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 160px;
+  padding-top: 80px;
+}
+
+/* ต้นไม้แต่ละต้น */
+.garden-plant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: plantSway 4s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.garden-plant:hover {
+  transform: scale(1.15);
+}
+
+.garden-plant:nth-child(even) { animation-delay: -2s; }
+.garden-plant:nth-child(3n) { animation-delay: -1s; }
+
+@keyframes plantSway {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.plant-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.plant-dot {
+  width: 8px;
+  height: 8px;
+  background: #8B6914;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+/* สวนว่างเปล่า */
+.garden-empty-msg {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #5a7a52;
+  font-size: 0.95rem;
+  padding: 3rem 1rem;
+}
+
+.garden-empty-msg .empty-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Garden Level badge */
+.garden-level-badge {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 3;
+  background: rgba(255,255,255,0.85);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: #5a7a52;
+  font-weight: 600;
+  border: 1.5px solid rgba(90,122,82,0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* -------------------------------------------------------------------------
+   2. STREAK CARD
+   ------------------------------------------------------------------------- */
+.streak-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.streak-fire {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.streak-number {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 3rem;
+  color: var(--primary);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.streak-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.streak-sub-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.streak-sub-stat {
+  text-align: center;
+}
+
+.streak-sub-stat .stat-val {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.streak-sub-stat .stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Streak active glow */
+.streak-card.has-streak {
+  border-color: var(--primary);
+}
+
+.streak-card.has-streak::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: var(--primary);
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   3. ACTIVITY STATS GRID
+   ------------------------------------------------------------------------- */
+.activity-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.activity-stat-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 1.2rem 1rem;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.activity-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.activity-stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.activity-stat-number {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.activity-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* -------------------------------------------------------------------------
+   4. MILESTONES
+   ------------------------------------------------------------------------- */
+.milestones-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.milestones-title {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.milestones-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.milestone-item {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s;
+}
+
+.milestone-item.achieved {
+  background: var(--primary-soft);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.milestone-item.locked {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border-color);
+  opacity: 0.6;
+}
+
+.milestone-item.achieved:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------------------------------------
+   5. RESPONSIVE
+   ------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .garden-scene {
+    min-height: 220px;
+  }
+
+  .plant-emoji {
+    font-size: 1.4rem;
+  }
+
+  .activity-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .streak-sub-stats {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Year Recap 📊 | Safe Space ♡</title>
+
+  <!-- สไตล์ชีต -->
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/myyear.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="floating-sparkle" style="top: 15%; left: 22%; font-size: 1.5rem;">✦</div>
+  <div class="floating-sparkle" style="top: 45%; right: 6%; font-size: 1.2rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 75%; left: 18%; font-size: 1.4rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">"A little place to come back to yourself."</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+        <li><a href="journal.html" class="nav-link"><span class="nav-icon">📖</span><span>Journal</span></a></li>
+        <li><a href="calendar.html" class="nav-link"><span class="nav-icon">📅</span><span>Calendar</span></a></li>
+        <li><a href="mood.html" class="nav-link"><span class="nav-icon">🌷</span><span>Mood</span></a></li>
+        <li><a href="memories.html" class="nav-link"><span class="nav-icon">📸</span><span>Memories</span></a></li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li><a href="letters.html" class="nav-link"><span class="nav-icon">💌</span><span>Letters</span></a></li>
+        <li><a href="garden.html" class="nav-link"><span class="nav-icon">🌱</span><span>Garden</span></a></li>
+        <li><a href="myyear.html" class="nav-link active"><span class="nav-icon">📊</span><span>My Year</span></a></li>
+        <li><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span><span>Settings</span></a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container"></div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <div class="top-header">
+        <div class="top-header-left">
+          <h2 class="page-title-header">📊 My Year Recap</h2>
+          <p class="page-subtitle-header">ย้อนดูเรื่องราวดีๆ ตลอดทั้งปี ♡</p>
+        </div>
+      </div>
+
+      <!-- Year Selector -->
+      <div class="year-selector">
+        <button class="year-nav-btn" id="btn-prev-year">‹</button>
+        <span class="year-label" id="year-label">📅 2026</span>
+        <button class="year-nav-btn" id="btn-next-year">›</button>
+      </div>
+
+      <!-- เนื้อหา Recap — เรนเดอร์จาก JS -->
+      <div id="year-content"></div>
+
+      <!-- Footer -->
+      <div class="page-footer">
+        <span>✦ every moment is part of your beautiful story ✦</span>
+      </div>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAV (mobile)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a href="journal.html" class="bottom-nav-item"><span class="nav-icon">📖</span><span>Journal</span></a>
+      <a href="calendar.html" class="bottom-nav-item"><span class="nav-icon">📅</span><span>Calendar</span></a>
+      <a href="mood.html" class="bottom-nav-item"><span class="nav-icon">🌷</span><span>Mood</span></a>
+      <a href="memories.html" class="bottom-nav-item"><span class="nav-icon">📸</span><span>Memories</span></a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/myyear.js?v=4"></script>
+
+</body>
+</html>

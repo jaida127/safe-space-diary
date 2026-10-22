@@ -1,0 +1,376 @@
+/* ==========================================================================
+   MYYEAR.CSS — My Year Recap 📊 (Safe Space ♡)
+   สรุปปีของคุณ: mood, journal stats, tags, songs, activity heatmap
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. YEAR SELECTOR
+   ------------------------------------------------------------------------- */
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.year-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.year-nav-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.year-label {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------
+   2. RECAP CARDS (ใช้ร่วมกันหลายส่วน)
+   ------------------------------------------------------------------------- */
+.recap-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+
+.recap-card-title {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------------
+   3. MOOD SUMMARY — โดนัทชาร์ต + breakdown
+   ------------------------------------------------------------------------- */
+.mood-recap-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CSS Donut Chart */
+.mood-donut {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mood-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mood-donut-center .top-emoji {
+  font-size: 1.5rem;
+}
+
+.mood-donut-center .top-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.mood-breakdown {
+  flex: 1;
+  min-width: 200px;
+}
+
+.mood-breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.mood-bar-track {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mood-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.mood-bar-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  min-width: 70px;
+}
+
+.mood-bar-pct {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  min-width: 35px;
+  text-align: right;
+}
+
+/* -------------------------------------------------------------------------
+   4. JOURNAL STATS — monthly bars
+   ------------------------------------------------------------------------- */
+.journal-stats-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.journal-stat-item {
+  text-align: center;
+}
+
+.journal-stat-val {
+  font-family: 'Caveat', 'Mali', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.journal-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Monthly bar chart */
+.monthly-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 100px;
+  padding-top: 0.5rem;
+}
+
+.monthly-bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.monthly-bar-fill {
+  width: 100%;
+  min-width: 16px;
+  max-width: 40px;
+  background: var(--primary);
+  border-radius: 6px 6px 0 0;
+  opacity: 0.7;
+  transition: height 0.6s ease, opacity 0.2s;
+}
+
+.monthly-bar-fill:hover {
+  opacity: 1;
+}
+
+.monthly-bar-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------------
+   5. TOP TAGS — tag cloud
+   ------------------------------------------------------------------------- */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-cloud-item {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.82rem;
+  border: 1px solid var(--accent-border);
+  transition: transform 0.2s;
+}
+
+.tag-cloud-item:hover {
+  transform: scale(1.05);
+}
+
+.tag-cloud-item .tag-count {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* -------------------------------------------------------------------------
+   6. TOP SONGS — playlist card
+   ------------------------------------------------------------------------- */
+.playlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-light, var(--border-color));
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-rank {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.playlist-info {
+  flex: 1;
+}
+
+.playlist-title {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.playlist-artist {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.playlist-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------------
+   7. ACTIVITY HEATMAP — year at a glance
+   ------------------------------------------------------------------------- */
+.heatmap-months {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.heatmap-month {
+  text-align: center;
+}
+
+.heatmap-month-name {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.heatmap-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.heatmap-day {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: var(--bg-secondary);
+  min-width: 6px;
+}
+
+.heatmap-day.level-1 { background: var(--primary-soft); }
+.heatmap-day.level-2 { background: var(--primary); opacity: 0.5; }
+.heatmap-day.level-3 { background: var(--primary); opacity: 0.75; }
+.heatmap-day.level-4 { background: var(--primary); }
+
+/* -------------------------------------------------------------------------
+   8. EMPTY STATE
+   ------------------------------------------------------------------------- */
+.year-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.year-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.year-empty p {
+  font-size: 0.95rem;
+}
+
+/* -------------------------------------------------------------------------
+   9. RESPONSIVE
+   ------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .mood-recap-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mood-donut {
+    margin: 0 auto 1rem;
+  }
+
+  .heatmap-months {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .journal-stats-row {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heatmap-months {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

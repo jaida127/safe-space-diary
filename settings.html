@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings ⚙️ | Safe Space ♡</title>
+
+  <!-- สไตล์ชีต -->
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/settings.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="floating-sparkle" style="top: 14%; left: 20%; font-size: 1.4rem;">✦</div>
+  <div class="floating-sparkle" style="top: 50%; right: 7%; font-size: 1.1rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 80%; left: 14%; font-size: 1.3rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">"A little place to come back to yourself."</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+        <li><a href="journal.html" class="nav-link"><span class="nav-icon">📖</span><span>Journal</span></a></li>
+        <li><a href="calendar.html" class="nav-link"><span class="nav-icon">📅</span><span>Calendar</span></a></li>
+        <li><a href="mood.html" class="nav-link"><span class="nav-icon">🌷</span><span>Mood</span></a></li>
+        <li><a href="memories.html" class="nav-link"><span class="nav-icon">📸</span><span>Memories</span></a></li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li><a href="letters.html" class="nav-link"><span class="nav-icon">💌</span><span>Letters</span></a></li>
+        <li><a href="garden.html" class="nav-link"><span class="nav-icon">🌱</span><span>Garden</span></a></li>
+        <li><a href="myyear.html" class="nav-link"><span class="nav-icon">📊</span><span>My Year</span></a></li>
+        <li><a href="settings.html" class="nav-link active"><span class="nav-icon">⚙️</span><span>Settings</span></a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container"></div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- Top Header -->
+      <div class="top-header">
+        <div class="top-header-left">
+          <h2 class="page-title-header">⚙️ Settings</h2>
+          <p class="page-subtitle-header">ปรับแต่งพื้นที่ส่วนตัวให้อบอุ่นถูกใจคุณ ♡</p>
+        </div>
+      </div>
+
+      <!-- 1. ธีมสี (Themes) -->
+      <section class="settings-section">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/bow.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <h3 class="settings-section-title">🎨 Scrapbook Themes</h3>
+        <p class="settings-section-desc">เลือกธีมและโทนสีที่คุณรู้สึกสบายตาที่สุด</p>
+        <div class="theme-grid" id="theme-grid">
+          <!-- เรนเดอร์การ์ดธีมจาก js/settings.js -->
+        </div>
+      </section>
+
+      <!-- 2. ชื่อเล่น (Profile / Nickname) -->
+      <section class="settings-section">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/cat.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <h3 class="settings-section-title">👤 My Nickname</h3>
+        <p class="settings-section-desc">ตั้งชื่อที่คุณอยากให้ Safe Space เรียกคุณในหน้าแรก</p>
+        <div class="nickname-input-group">
+          <input type="text" id="nickname-input" class="nickname-input" placeholder="พิมพ์ชื่อเล่นของคุณ (เช่น แป้ง, นุ่น, มิว...)" maxlength="20">
+          <button class="nickname-save-btn" id="btn-save-nickname">บันทึกชื่อ ♡</button>
+        </div>
+        <div class="nickname-preview" id="nickname-preview">
+          <span id="nickname-preview-text">สวัสดี, เธอ ♡ ขอให้เป็นวันที่แสนอบอุ่นนะ</span>
+        </div>
+      </section>
+
+      <!-- 3. ฟอนต์ (Font Selection) -->
+      <section class="settings-section">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/doodle.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <h3 class="settings-section-title">✏️ Font Style</h3>
+        <p class="settings-section-desc">เลือกรูปแบบตัวอักษรสำหรับไดอารี่และเว็บไซต์</p>
+        <div class="font-options">
+          <label class="font-option" data-font="default">
+            <input type="radio" name="font-choice" value="default">
+            <div class="font-option-label">
+              <div class="font-option-name">🔤 ปกติ (Prompt / Inter)</div>
+              <div class="font-option-preview">เรียบง่าย สบายตา อ่านง่ายและชัดเจน</div>
+            </div>
+          </label>
+          <label class="font-option" data-font="handwritten">
+            <input type="radio" name="font-choice" value="handwritten">
+            <div class="font-option-label">
+              <div class="font-option-name">✍️ ลายมือน่ารัก (Mali & Caveat)</div>
+              <div class="font-option-preview">อบอุ่น อ่อนโยน เหมือนเขียนด้วยปากกาบนสมุดไดอารี่จริง</div>
+            </div>
+          </label>
+          <label class="font-option" data-font="clean">
+            <input type="radio" name="font-choice" value="clean">
+            <div class="font-option-label">
+              <div class="font-option-name">📖 คลีนมินิมอล (Inter)</div>
+              <div class="font-option-preview">สไตล์สมุดโน้ตสากล สะอาดและเป็นระเบียบ</div>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- 4. สำรองและนำเข้าข้อมูล (Data Management) -->
+      <section class="settings-section">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/star.png" class="scrapbook-sticker sticker-sm sticker-corner-tr" alt="sticker">
+        <h3 class="settings-section-title">💾 Data Backup & Restore</h3>
+        <p class="settings-section-desc">บันทึกข้อมูลทุกอย่างเก็บไว้ หรือย้ายข้อมูลไปยังอุปกรณ์อื่น</p>
+        <div class="data-actions">
+          <button class="data-btn" id="btn-export-data">
+            <span>📤</span>
+            <span>ดาวน์โหลดข้อมูลสำรอง (.json)</span>
+          </button>
+          <label class="data-btn data-btn-import">
+            <span>📥</span>
+            <span>นำเข้าข้อมูลสำรอง (.json)</span>
+            <input type="file" id="file-import-data" accept=".json">
+          </label>
+        </div>
+      </section>
+
+      <!-- 5. Danger Zone: ลบข้อมูลทั้งหมด -->
+      <section class="settings-section settings-danger">
+        <h3 class="settings-section-title">🗑️ Reset / Danger Zone</h3>
+        <p class="settings-section-desc">ลบประวัติการเขียน Journal, อารมณ์, จดหมาย, และรูปภาพทั้งหมดใน Safe Space</p>
+        <button class="danger-btn" id="btn-open-delete-modal">ลบข้อมูลทั้งหมด</button>
+      </section>
+
+      <!-- 6. About -->
+      <div class="about-section">
+        <div class="about-name">Safe Space ♡</div>
+        <div class="about-version">v1.0 (Phase 1-3 Complete)</div>
+        <div class="about-desc">พื้นที่สบายใจ สำหรับบันทึกความรู้สึก อารมณ์ และช่วงเวลาดีๆ ของคุณ</div>
+        <div class="about-heart">made with all our love and care 💕</div>
+      </div>
+
+      <!-- Footer -->
+      <div class="page-footer">
+        <span>✦ a quiet corner just for you ✦</span>
+      </div>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAV (mobile)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Home</span></a>
+      <a href="journal.html" class="bottom-nav-item"><span class="nav-icon">📖</span><span>Journal</span></a>
+      <a href="calendar.html" class="bottom-nav-item"><span class="nav-icon">📅</span><span>Calendar</span></a>
+      <a href="mood.html" class="bottom-nav-item"><span class="nav-icon">🌷</span><span>Mood</span></a>
+      <a href="memories.html" class="bottom-nav-item"><span class="nav-icon">📸</span><span>Memories</span></a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- ====================================================================
+       MODAL: ยืนยันการลบข้อมูล (Delete Confirmation)
+       ==================================================================== -->
+  <div class="delete-modal-overlay" id="delete-modal">
+    <div class="delete-modal">
+      <div class="delete-modal-icon">⚠️</div>
+      <h4 class="delete-modal-title">คุณแน่ใจหรือไม่?</h4>
+      <p class="delete-modal-desc">
+        การกระทำนี้จะล้างข้อมูลไดอารี่ อารมณ์ จดหมาย และรูปภาพทั้งหมด<br>
+        <strong>ไม่สามารถกู้คืนได้</strong> หากต้องการยืนยัน ให้พิมพ์คำว่า <strong>DELETE</strong> หรือ <strong>ลบข้อมูล</strong> ด้านล่าง
+      </p>
+      <input type="text" id="delete-modal-input" class="delete-modal-input" placeholder="พิมพ์ DELETE เพื่อยืนยัน">
+      <div class="delete-modal-actions">
+        <button class="delete-cancel-btn" id="btn-cancel-delete">ยกเลิก</button>
+        <button class="delete-confirm-btn" id="btn-confirm-delete">ยืนยันลบทั้งหมด</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/settings.js?v=4"></script>
+
+</body>
+</html>

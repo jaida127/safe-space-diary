@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="pink-polka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar ♡ | Safe Space</title>
+
+  <link rel="stylesheet" href="css/themes.css?v=4">
+  <link rel="stylesheet" href="css/base.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/calendar.css?v=4">
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="floating-sparkle" style="top: 10%; left: 20%; font-size: 1.4rem;">✦</div>
+  <div class="floating-sparkle" style="top: 55%; right: 5%; font-size: 1.1rem; animation-delay: 2s;">✧</div>
+  <div class="floating-sparkle" style="top: 80%; left: 15%; font-size: 1.3rem; animation-delay: 3.5s;">♡</div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. SIDEBAR
+         ==================================================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="sticker-badge" style="margin-bottom: 0.5rem;">my quiet corner ♡</span>
+        <h1 class="brand-title">Safe Space <span class="brand-heart">♡</span></h1>
+        <p class="brand-tagline">"A little place to come back to yourself."</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="journal.html" class="nav-link">
+            <span class="nav-icon">📖</span>
+            <span>Journal</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html" class="nav-link active">
+            <span class="nav-icon">📅</span>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="mood.html" class="nav-link">
+            <span class="nav-icon">🌷</span>
+            <span>Mood</span>
+          </a>
+        </li>
+        <li>
+          <a href="memories.html" class="nav-link">
+            <span class="nav-icon">📸</span>
+            <span>Memories</span>
+          </a>
+        </li>
+
+        <li class="nav-divider"></li>
+        <li class="nav-subhead">Little Treasures</li>
+
+        <li>
+          <a href="letters.html" class="nav-link">
+            <span class="nav-icon">💌</span>
+            <span>Letters</span>
+          </a>
+        </li>
+        <li>
+          <a href="garden.html" class="nav-link">
+            <span class="nav-icon">🌱</span>
+            <span>Garden</span>
+          </a>
+        </li>
+        <li>
+          <a href="myyear.html" class="nav-link">
+            <span class="nav-icon">📊</span>
+            <span>My Year</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 7 ธีมสี -->
+      <div class="sidebar-footer">
+        <div class="nav-subhead" style="padding-left: 0;">🎨 Scrapbook Themes</div>
+        <div class="theme-palette-container">
+          <!-- เรนเดอร์โดย js/themes.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         2. MAIN CONTENT
+         ==================================================================== -->
+    <main class="main-content">
+
+      <!-- Top Header -->
+      <div class="top-header">
+        <div class="top-header-left">
+          <h2 class="page-title-header">📅 Calendar</h2>
+          <p class="page-subtitle-header">ดูอารมณ์และบันทึกแต่ละวันของคุณ</p>
+        </div>
+        <div class="top-header-right">
+          <button class="btn-primary" onclick="CalendarApp.goToToday()">วันนี้</button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           CALENDAR HEADER — ปุ่มเดือนก่อน / ชื่อเดือน / ปุ่มเดือนถัดไป
+           ==================================================================== -->
+      <div class="calendar-nav">
+        <button class="cal-nav-btn" id="btn-prev-month" aria-label="เดือนก่อน">‹</button>
+        <div class="cal-month-label" id="cal-month-label">loading...</div>
+        <button class="cal-nav-btn" id="btn-next-month" aria-label="เดือนถัดไป">›</button>
+      </div>
+
+      <!-- ====================================================================
+           CALENDAR GRID
+           ==================================================================== -->
+      <div class="calendar-card">
+        <div class="washi-tape"></div>
+        <img src="assets/stickers/bear.png" class="scrapbook-sticker sticker-md sticker-corner-tr" alt="bear sticker">
+        <img src="assets/stickers/flower.png" class="scrapbook-sticker sticker-sm sticker-corner-tl" alt="flower sticker">
+        <!-- วันในสัปดาห์ -->
+        <div class="cal-weekdays">
+          <div>อา</div><div>จ</div><div>อ</div><div>พ</div>
+          <div>พฤ</div><div>ศ</div><div>ส</div>
+        </div>
+        <!-- เซลล์วันจะถูก inject ด้วย JS -->
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+
+      <!-- ====================================================================
+           LEGEND — สีของ Mood
+           ==================================================================== -->
+      <div class="cal-legend">
+        <span class="legend-title">mood ในเดือนนี้:</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ff9eb5;"></span>happy</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#aad4f5;"></span>calm</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#c3aee8;"></span>hopeful</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ffe5a0;"></span>anxious</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ffb3a0;"></span>sad</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#d4d4d4;"></span>tired</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#b5e8c8;"></span>grateful</span>
+      </div>
+
+      <!-- ====================================================================
+           DAY DETAIL POPUP — แสดงเมื่อคลิกวันใดวันหนึ่ง
+           ==================================================================== -->
+      <div class="day-detail-overlay" id="day-detail-overlay" style="display:none;" onclick="CalendarApp.closeDayDetail(event)">
+        <div class="day-detail-panel" id="day-detail-panel">
+          <div class="washi-tape"></div>
+          <img src="assets/stickers/heart.png" class="scrapbook-sticker sticker-sm sticker-corner-tl" alt="heart sticker">
+          <button class="day-detail-close" onclick="CalendarApp.closeDayDetail(null, true)" aria-label="ปิด">×</button>
+
+          <div class="day-detail-date" id="dd-date"></div>
+
+          <!-- ส่วน Mood -->
+          <div class="day-detail-section" id="dd-mood-section">
+            <div class="dd-section-label">🌸 อารมณ์วันนี้</div>
+            <div class="dd-mood-display" id="dd-mood-display"></div>
+          </div>
+
+          <!-- ส่วน Song -->
+          <div class="day-detail-section" id="dd-song-section">
+            <div class="dd-section-label">🎵 เพลงของวัน</div>
+            <div class="dd-song-display" id="dd-song-display"></div>
+          </div>
+
+          <!-- ส่วน Journal -->
+          <div class="day-detail-section" id="dd-journal-section">
+            <div class="dd-section-label">📖 Journal วันนี้</div>
+            <div class="dd-journal-list" id="dd-journal-list"></div>
+          </div>
+
+          <!-- Empty state -->
+          <div class="dd-empty" id="dd-empty" style="display:none;">
+            <div class="dd-empty-icon">🌸</div>
+            <p>ยังไม่มีบันทึกสำหรับวันนี้</p>
+            <a href="journal.html?action=new" class="btn-primary" style="font-size:0.85rem; padding:0.5rem 1.2rem;">+ เขียน Journal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="page-footer">
+        <span>✦ every day is a page in your story ✦</span>
+      </div>
+
+    </main>
+
+    <!-- ====================================================================
+         3. BOTTOM NAV (mobile)
+         ==================================================================== -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item">
+        <span class="nav-icon">🏠</span><span>Home</span>
+      </a>
+      <a href="journal.html" class="bottom-nav-item">
+        <span class="nav-icon">📖</span><span>Journal</span>
+      </a>
+      <a href="calendar.html" class="bottom-nav-item active">
+        <span class="nav-icon">📅</span><span>Calendar</span>
+      </a>
+      <a href="mood.html" class="bottom-nav-item">
+        <span class="nav-icon">🌷</span><span>Mood</span>
+      </a>
+      <a href="memories.html" class="bottom-nav-item">
+        <span class="nav-icon">📸</span><span>Memories</span>
+      </a>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts — โหลดตามลำดับ -->
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/themes.js?v=4"></script>
+  <script src="js/calendar.js?v=4"></script>
+</body>
+</html>

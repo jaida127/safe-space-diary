@@ -1,0 +1,323 @@
+/* ==========================================================================
+   THEMES.CSS - Safe Space ♡ (Revamped Cute Scrapbook & Pinterest Edition)
+   ระบบ 7 ธีมสีสดใส พร้อมลวดลาย Polka Dots / Patterns เฉพาะตัว
+   ========================================================================== */
+
+:root,
+[data-theme="pink-polka"] {
+  /* -------------------------------------------------------------------------
+     🎀 1. Pink Polka (Default Theme)
+     Bubblegum Pink + Blush Pink + Cream + Cherry Pink + Soft Brown + Polka Dot
+     ------------------------------------------------------------------------- */
+  --bg-primary: #FFF5F7;
+  --bg-secondary: #FFE8ED;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFF9FA;
+  --bg-paper: #FFFDFC;
+
+  --text-primary: #52343A;
+  --text-secondary: #916872;
+  --text-muted: #BFA0A8;
+
+  --primary: #FF7B9A;
+  --primary-hover: #F26284;
+  --primary-soft: #FFEDF2;
+  --accent: #FF527B;
+  --accent-soft: #FFE3EA;
+  --accent-border: #FFCCD7;
+
+  --border-color: #F8D8E0;
+  --border-light: #FDF0F3;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(255, 123, 154, 0.45), rgba(255, 123, 154, 0.45) 10px, rgba(255, 182, 199, 0.45) 10px, rgba(255, 182, 199, 0.45) 20px);
+  --washi-tape-alt: rgba(255, 204, 215, 0.7);
+
+  --button-bg: #FF7B9A;
+  --button-hover: #F26284;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(255, 123, 154, 0.12);
+  --shadow-md: 0 8px 24px rgba(255, 123, 154, 0.18);
+  --shadow-lg: 0 16px 36px rgba(255, 123, 154, 0.22);
+
+  --quote-bg: #FFF0F4;
+  --mood-active: #FFDDE5;
+  
+  /* ลาย Polka Dot อ่อนหวาน */
+  --bg-pattern: radial-gradient(#FFCCD7 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   🩵 2. Baby Blue
+   Baby Blue + Powder Blue + White/Ivory + Medium Blue + Soft Gray + Polka/Grid
+   ------------------------------------------------------------------------- */
+[data-theme="baby-blue"] {
+  --bg-primary: #F0F7FC;
+  --bg-secondary: #E1EFF9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FCFE;
+  --bg-paper: #FCFEFF;
+
+  --text-primary: #2C4356;
+  --text-secondary: #637F96;
+  --text-muted: #95AEBF;
+
+  --primary: #5EA8D8;
+  --primary-hover: #4B94C4;
+  --primary-soft: #E4F1FA;
+  --accent: #3F92C7;
+  --accent-soft: #DCECF8;
+  --accent-border: #BCD9ED;
+
+  --border-color: #D2E7F5;
+  --border-light: #E8F3FA;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(94, 168, 216, 0.45), rgba(94, 168, 216, 0.45) 10px, rgba(162, 207, 237, 0.45) 10px, rgba(162, 207, 237, 0.45) 20px);
+  --washi-tape-alt: rgba(188, 217, 237, 0.7);
+
+  --button-bg: #5EA8D8;
+  --button-hover: #4B94C4;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(94, 168, 216, 0.12);
+  --shadow-md: 0 8px 24px rgba(94, 168, 216, 0.18);
+  --shadow-lg: 0 16px 36px rgba(94, 168, 216, 0.22);
+
+  --quote-bg: #EAF4FB;
+  --mood-active: #CFE5F5;
+
+  --bg-pattern: radial-gradient(#BEDBF0 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   💜 3. Lavender
+   Lavender + Lilac + Cream + Soft Purple + Muted Pink
+   ------------------------------------------------------------------------- */
+[data-theme="lavender"] {
+  --bg-primary: #F8F4FD;
+  --bg-secondary: #EFE8FA;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FCFAFE;
+  --bg-paper: #FDFBFF;
+
+  --text-primary: #473659;
+  --text-secondary: #7B6891;
+  --text-muted: #AA9BBF;
+
+  --primary: #A282D8;
+  --primary-hover: #8F6DC9;
+  --primary-soft: #F2ECFA;
+  --accent: #8E65D0;
+  --accent-soft: #ECE2F8;
+  --accent-border: #DACAF0;
+
+  --border-color: #E4D8F3;
+  --border-light: #F2ECF9;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(162, 130, 216, 0.45), rgba(162, 130, 216, 0.45) 10px, rgba(206, 185, 240, 0.45) 10px, rgba(206, 185, 240, 0.45) 20px);
+  --washi-tape-alt: rgba(218, 202, 240, 0.7);
+
+  --button-bg: #A282D8;
+  --button-hover: #8F6DC9;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(162, 130, 216, 0.12);
+  --shadow-md: 0 8px 24px rgba(162, 130, 216, 0.18);
+  --shadow-lg: 0 16px 36px rgba(162, 130, 216, 0.22);
+
+  --quote-bg: #F4ECFC;
+  --mood-active: #DFCEF6;
+
+  --bg-pattern: radial-gradient(#DBC8F2 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   🍃 4. Pistachio
+   Pistachio Green + Cream + Warm Beige + Soft Green + Darker Green Accent
+   ------------------------------------------------------------------------- */
+[data-theme="pistachio"] {
+  --bg-primary: #F3F8F2;
+  --bg-secondary: #E4F0E3;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FAFCFA;
+  --bg-paper: #FDFEFD;
+
+  --text-primary: #2E4533;
+  --text-secondary: #637F68;
+  --text-muted: #95AE9A;
+
+  --primary: #76A97D;
+  --primary-hover: #619568;
+  --primary-soft: #E8F3E9;
+  --accent: #55905D;
+  --accent-soft: #DDEEDE;
+  --accent-border: #C4E2C7;
+
+  --border-color: #D4E8D6;
+  --border-light: #EAF4EB;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(118, 169, 125, 0.45), rgba(118, 169, 125, 0.45) 10px, rgba(175, 211, 180, 0.45) 10px, rgba(175, 211, 180, 0.45) 20px);
+  --washi-tape-alt: rgba(196, 226, 199, 0.7);
+
+  --button-bg: #76A97D;
+  --button-hover: #619568;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(118, 169, 125, 0.12);
+  --shadow-md: 0 8px 24px rgba(118, 169, 125, 0.18);
+  --shadow-lg: 0 16px 36px rgba(118, 169, 125, 0.22);
+
+  --quote-bg: #EDF6EE;
+  --mood-active: #CDE6D0;
+
+  --bg-pattern: radial-gradient(#C2DEC5 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   🍓 5. Strawberry
+   Strawberry Pink + Soft Red + Pale Pink + Cream + Cherry Red Accent
+   ------------------------------------------------------------------------- */
+[data-theme="strawberry"] {
+  --bg-primary: #FFF4F4;
+  --bg-secondary: #FFE2E2;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFF9F9;
+  --bg-paper: #FFFDFD;
+
+  --text-primary: #5A2E35;
+  --text-secondary: #995B65;
+  --text-muted: #C49098;
+
+  --primary: #F25C74;
+  --primary-hover: #DC435C;
+  --primary-soft: #FFE8EC;
+  --accent: #E53957;
+  --accent-soft: #FFDDE3;
+  --accent-border: #FFC0CB;
+
+  --border-color: #FCD1D7;
+  --border-light: #FDE8EC;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(242, 92, 116, 0.45), rgba(242, 92, 116, 0.45) 10px, rgba(255, 168, 183, 0.45) 10px, rgba(255, 168, 183, 0.45) 20px);
+  --washi-tape-alt: rgba(255, 192, 203, 0.7);
+
+  --button-bg: #F25C74;
+  --button-hover: #DC435C;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(242, 92, 116, 0.14);
+  --shadow-md: 0 8px 24px rgba(242, 92, 116, 0.20);
+  --shadow-lg: 0 16px 36px rgba(242, 92, 116, 0.24);
+
+  --quote-bg: #FFEDF0;
+  --mood-active: #FFD4DB;
+
+  --bg-pattern: radial-gradient(#FCC0C9 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   🍫 6. Cocoa
+   Chocolate Brown + Cocoa + Caramel + Beige + Cream
+   ------------------------------------------------------------------------- */
+[data-theme="cocoa"] {
+  --bg-primary: #FAF5EE;
+  --bg-secondary: #EFE4D6;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FCFAF6;
+  --bg-paper: #FDFCF9;
+
+  --text-primary: #463429;
+  --text-secondary: #806756;
+  --text-muted: #AE9786;
+
+  --primary: #9C7053;
+  --primary-hover: #865D42;
+  --primary-soft: #F4EAE1;
+  --accent: #8A5B3E;
+  --accent-soft: #EDE0D4;
+  --accent-border: #DBC8B7;
+
+  --border-color: #E4D5C5;
+  --border-light: #F2EAE0;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(156, 112, 83, 0.45), rgba(156, 112, 83, 0.45) 10px, rgba(206, 173, 150, 0.45) 10px, rgba(206, 173, 150, 0.45) 20px);
+  --washi-tape-alt: rgba(219, 200, 183, 0.7);
+
+  --button-bg: #9C7053;
+  --button-hover: #865D42;
+  --button-text: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(156, 112, 83, 0.12);
+  --shadow-md: 0 8px 24px rgba(156, 112, 83, 0.18);
+  --shadow-lg: 0 16px 36px rgba(156, 112, 83, 0.22);
+
+  --quote-bg: #F5EDE4;
+  --mood-active: #E4D3C1;
+
+  --bg-pattern: radial-gradient(#DDCBB9 1.8px, transparent 1.8px);
+  --bg-pattern-size: 24px 24px;
+}
+
+/* -------------------------------------------------------------------------
+   🌙 7. Midnight
+   Deep Navy + Muted Blue + Lavender + Soft Purple + Cream/Off-white
+   ------------------------------------------------------------------------- */
+[data-theme="midnight"] {
+  --bg-primary: #121526;
+  --bg-secondary: #1B1F38;
+  --bg-card: #202642;
+  --bg-card-hover: #272E50;
+  --bg-paper: #1B213A;
+
+  --text-primary: #F3F5FC;
+  --text-secondary: #A9B3D4;
+  --text-muted: #737E9E;
+
+  --primary: #A294F9;
+  --primary-hover: #8E7DF7;
+  --primary-soft: #2E3359;
+  --accent: #B2A4FF;
+  --accent-soft: #282C4C;
+  --accent-border: #424976;
+
+  --border-color: #333A62;
+  --border-light: #252A47;
+
+  --washi-tape: repeating-linear-gradient(45deg, rgba(162, 148, 249, 0.45), rgba(162, 148, 249, 0.45) 10px, rgba(121, 108, 209, 0.45) 10px, rgba(121, 108, 209, 0.45) 20px);
+  --washi-tape-alt: rgba(66, 73, 118, 0.7);
+
+  --button-bg: #A294F9;
+  --button-hover: #8E7DF7;
+  --button-text: #121526;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.55);
+
+  --quote-bg: #262D4E;
+  --mood-active: #3C4573;
+
+  /* ลวดลายกลุ่มดาวนุ่มตาในความมืด */
+  --bg-pattern: radial-gradient(#3B4473 1.5px, transparent 1.5px);
+  --bg-pattern-size: 26px 26px;
+}
+
+/* นุ่มนวลเมื่อเปลี่ยนสีธีม ไม่กระตุก */
+body, 
+.card, 
+.quote-card, 
+.sidebar, 
+.bottom-nav,
+.btn,
+.mood-btn,
+.form-control {
+  transition: background-color 0.4s ease, 
+              border-color 0.4s ease, 
+              color 0.3s ease, 
+              box-shadow 0.4s ease;
+}
